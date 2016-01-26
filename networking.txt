@@ -1,4 +1,4 @@
-IWhat is the core tradeoff in a distributed hash table?
+What is the core tradeoff in a distributed hash table?
 The number of neighbors a peer has to track
 The number of messages a peer must send to resolve a query ("Who is responsible for hashed key 13?")
 
@@ -73,44 +73,3 @@ Caching could be implemented using:
 Date modified (Resp: Last-Modified, Req: If-Modified-Since)
 ETags (Req: If-None-Match, Resp: ETag)
 Cache-Control (Req+Res: "Cache-Control: max-age=120").
-
-
-
-Commonly imported Django modules?
-
-
-
-AWS:
-
-stack (dev prod). has many layers.
-
-layer = collection of instances. expand and contract as needed. has recipes.
-
-instances (potentially many instances in an app)
-
-
-
-apps (seminar, schools) (within stacks) doesn't support django so we don't really use it. they're just labels.
-
-
-
-figure out which file opsworks is logging into
-ps fauxw, look for the line with tee
-
-
-
-for x in seminar{1,2}; do ssh $x 'ls -l'; end
-
-Integration test logs?
-logs/integration_4000.log
-
-Find out what filesystem files a command touched?
-strace on linux, dtruss on OSX
-
-Lots of migration-related looking test failures on ./scripts/serverunit?
-Turn off REUSE_DB=1 and remigrate the DB. You can use it again afterwards.
-Server unit environment = local.
-
-Bash:
-Last word on previous line?
-!$

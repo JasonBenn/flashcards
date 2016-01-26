@@ -1,0 +1,8 @@
+for x in seminar{1,2}; do ssh $x 'ls -l'; end
+
+Find out what filesystem files a command touched?
+strace on linux, dtruss on OSX
+
+Bash:
+Last word on previous line?
+!$

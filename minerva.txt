@@ -1,0 +1,18 @@
+Lots of migration-related looking test failures on ./scripts/serverunit?
+Turn off REUSE_DB=1 and remigrate the DB. You can use it again afterwards.
+Server unit environment = local.
+
+Integration test logs?
+logs/integration_4000.log
+
+--- TO DO ---
+
+AWS:
+stack (dev prod). has many layers.
+layer = collection of instances. expand and contract as needed. has recipes.
+instances (potentially many instances in an app)
+
+apps (seminar, schools) (within stacks) doesn't support django so we don't really use it. they're just labels.
+
+figure out which file opsworks is logging into
+ps fauxw, look for the line with tee
