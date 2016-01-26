@@ -1,3 +1,28 @@
+Display the differences between an environment and Django's default settings
+manage.py diffsettings
+
+What are Django's five log levels?
+DEBUG, INFO, WARN(ING), ERROR, CRITICAL
+
+What are the four parts of Django's logging system?
+Loggers, Handlers, Filters, Formatters
+
+Enter/exit a virtualenv?
+workon $VIRTUALENV deactivate
+
+How do you create a timezone-aware datetime?
+from django.utils import timezone timezone.now()
+
+Inspect Python's import search path?
+import sys 
+sys.path
+
+List Django packages installed in your current environment?
+pip list
+
+Step one line in ipdb
+s(tep)
+
 --- TO DO ---
 
 Commonly imported Django modules?

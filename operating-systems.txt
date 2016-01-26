@@ -1,3 +1,188 @@
+2>1 vs 2>&1?
+2>1 redirects stderr in a file named 1 2>&1 redirects stderr to stdout & in the context of redirects means file descriptors. So &1 is stdout.
+
+Change a file access and modification times (atime, mtime)
+touch 
+Can also set them to arbitrary value or to match another file
+
+Copies files between hosts on a network Works over a secure connection (SSH)
+scp
+
+Displays various networks related information such as open connections, open socket ports etc
+List all ports `netstat -a` 
+List all listening ports `netstat -l` 
+List listening TCP ports `netstat -t` 
+Display PID and program names for a specific port `netstat -p {PROTOCOL}`
+
+Dump traffic on a network
+tcpdump 
+capture the traffic from a specific interface, source, destination and port: 
+tcpdump -i [eth0] src [192.168.1.1] dest [192.168.1.2] and port 80 
+capture the traffic from or to a host tcpdump host [www.example.com]
+
+How do you redirect STDERR to STDOUT?
+2>&1
+
+How do you redirect both STDERR and STDOUT to a file?
+(echo stdout; echo stderr 1>&2) &> file OR: tail > file 2&>1
+
+Less: jump to 90% through the file? Open file at 90%?
+90p less +90p today.log
+
+Place standard output in the clipboard
+pbcopy
+
+Print the route packets trace to network host
+traceroute [host]
+
+Run replacements based on regular expressions
+sed replace all occurrences of a string in a file, and print the result sed 's/[find]/[replace]/g' [filename]
+
+Search file for occurences of `{` in file txt
+egrep '{' txt single quotes ensure that char is not evaluated by the shell, but instead by egrep.
+
+Send the contents of the clipboard to standard output
+pbpaste
+
+Show or set the system's host name
+Show current host name hostname Set current host name hostname [new_hostname]
+
+Split a file into pieces
+split Split a file into 5 files. File is split such that each split has same size (except the last split) split -n 5 [filename] Split a file with at most 512 bytes of lines in each split. split -C 512 [filename]
+
+connect to a specified port of a host
+telnet [ip_address] [port]
+
+egrep: Exclude pattern?
+-v (or --invert-match)
+
+egrep: context options?
+-ABC after-context, before-context, context
+
+egrep: print line numbers?
+-n (or --line-number)
+
+egrep: recursively descend into directory?
+-R (or -r)
+
+ps: a?
+All users' processes. Skips those processes without a controlling terminal.
+
+ps: u?
+Display user information
+
+send ICMP ECHO_REQUEST packets to network hosts
+ping Ping host limiting the number of packages to be send to four ping -c 4 [host] Ping host, waiting for 0.5 s between each request (default is 1 s) ping -i 0.5 [host] Ping host without trying to lookup symbolic names for addresses ping -n [host]
+
+A running process can keep a deleted file open. Which disk measuring utility will see actual usage?
+df! du will no longer see a reference to the file in the dir tree. df = reads the superblock, trusts it du = reads each object, sums
+
+Access a background process?
+To inspect jobs managed by the current shell: jobs fg 1
+
+Backup mysql database
+mysqldump [database_name] > [filename.sql]
+
+Combined traceroute and ping tool
+mtr Traceroute to a host and continuously ping all intermediary hops mtr [host] Disable IP address and host name mapping mtr -n [host] Generate output after pinging each hop 10 times mtr -w [host] Force IP IPv4 or IPV6 mtr -4 [host]
+
+Compare files and directories
+diff Compare files diff [file1] [file2] Compare files, ignoring white spaces diff -w [file1] [file2] Compare files, showing differences side by side diff -y [file1] [file2] Compare directories recursively diff -r [directory1] [directory2] Compare directories, only showing the names of files that differ diff -rq [directory1] [directory2]
+
+Convert text from one encoding to another
+iconv
+
+Cut fields or characters from STDIN
+cut
+
+DNS lookup utility
+dig Lookup the IP(s) associated with a hostname (A records) dig +short [hostname.com] Specify an alternate DNS server to query (8.8.8.8 is google's public DNS) dig @8.8.8.8 [hostname.com]
+
+Display dynamic real-time information about running processes
+top Get help about interactive commands ?
+
+Execute SQL statements from a file
+mysql [database_name] &lt; [script.sql]
+
+Find files under the given directory tree, recursively
+find find files by extension find [root_path] -name ['*.py'] find files using case insensitive name matching, of a certain size find [root_path] -size +500k -size -10MB -iname ['*.TaR.gZ'] find files modified since a certain time find [root_path] -name ['*.py'] -mtime [-1d]
+
+Finds duplicate files in a given set of directories
+fdupes
+
+Imagemagick image conversion tool
+convert Convert an image from JPG to PNG convert [image.jpg] [image.png] Scale an image 50% it's original size convert [image.png] -resize 50% [image2.png] Horizontally append images convert [image1.png] [image2.png] [image3.png] +append [image123.png]
+
+Less: jump to line #150? Open file at a line number?
+150g less -N +150g today.log
+
+List open files and corresponding processes
+lsof find the process that opened a local internet port lsof -i :[8080]
+
+Network exploration tool and security
+port scanner
+nmap scan open ports of a single host nmap [192.168.0.1] discover hosts in the 192.168.0.X area (no port scan) nmap -sn [ip address]
+
+Opens a connection to a Redis server
+redis-cli
+
+Print calendar information
+cal current month: cal any year: cal 2016
+
+Print the 4th column of some output
+awk '{print $4}' Single quotes prevent Bash expansion. {$4} is just ancient awk syntax.
+
+Print/concatenate files
+cat Print the contents of file1 to the standard output cat [file1] Concatenate several files into the target file. cat [file1] [file2] > [target-file]
+
+Reads and writes TCP or UDP data
+nc listen on a specified port nc -l [port] connect to a certain port (you can then write to this port) nc [ip_address] [port] serve a file cat somefile.txt | nc -l [port] receive a file nc [ip_address] [port] > somefile.txt
+
+Search in manpages for example to find a new command
+apropos search for keyword without restricting output to terminal width apropos -l [regular_expression]
+
+Set or display system date
+date
+
+Show the environment or run a program in a modified environment
+env Clear the environment and run a program env -i [program] Remove variable from the environment and run a program env -u [variable] [program] Set a variable and run a program env [variable]=[value] [program]
+
+The simplest tool to perform a load testing
+ab (Apache Benchmarking tool) Execute 100 HTTP GET requests to given URL. ab -n 100 [url] Execute 100 HTTP GET requests, processing up to 10 requests concurrently, to given URL. ab -n 100 -c 10 [url]
+
+awk: specify delimiting char?
+-F ':' ^ is a regex
+
+egrep: only search directories matching filename pattern X?
+--include-dir 'X' --exclude-dir patterns take priority
+
+egrep: only search files matching X pattern?
+--include 'X' Patterns are matched to full file path, not just filename component. If a file matches include and exclude, exclude takes priority.
+
+gives an overview of the file system disk space usage
+df display all file systems and their disk usage in human readable form df -h
+
+grep vs egrep vs zegrep?
+grep: basic regex egrep: extended regex zegrep: egrep for files compressed with compress or gzip
+
+less: search for a pattern?
+/pattern navigate from match to match: n (forwards) N (backwards)
+
+ps without flags?
+All of your processes that have controlling terminals.
+
+ps: j?
+jobs, pids
+
+ps: u
+Display usernames.
+
+ps: w?
+wide (it just wraps)
+
+ps: x?
+Display processes without controlling terminals (things launched by Launchpad, for example)
+
 for x in seminar{1,2}; do ssh $x 'ls -l'; end
 
 Find out what filesystem files a command touched?

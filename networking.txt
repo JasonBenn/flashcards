@@ -1,3 +1,63 @@
+What protocol layer is SSL?
+Trick question, it's not a protocol, it's just two application-level decorator functions for the TCP socket API. (Sending host pushes data into SSL's socket-like API. SSL encrypts and pushes into TCP socket API. Receiving host receives data from TCP socket, passes to SSL socket-like API, decrypts, passes to application.)
+
+At each node along a path, a packet suffers delays. What are the 4 most important kind of delays?
+Nodal processing - examine headers, decide where to send it Queueing - before transmitting on to a link Transmission - link transmission rate/packet size Propagation - propagation speed of the link
+
+Best defense against attackers masquerading as someone a host trusts?
+End-point authentication, which allows us to say with certainty who is sending us packets.
+
+Best defense against packet sniffing?
+Cryptography
+
+How does a router map destination addresses (or portions thereof) to its outgoing links?
+With a forwarding table.
+
+Three types of DoS attacks?
+Vulnerability attack - send the right messages to a vulnerable app, make the app or the host crash Bandwidth flooding - send tons of packets, legit packets are dropped Connection flooding - bog them down with bogus TCP connections, host stops accepting legit connections.
+
+Virus vs worm?
+Virus requires user interaction to infect the device, worms don't. (user might be running vulnerable application in which attacker can just send malware)
+
+What are some features that TCP implements that UDP does not?
+Congestion control, flow control, reliable data transfer
+
+What are the benefits of radio channels carrying signals in the electromagnetic spectrum?
+They can penetrate walls and potentially travel long distances
+
+What are the terms for the relationship between an access ISP and a global transit ISP?
+A customer and a provider. Customer pays provider based on traffic exchanged with provider.
+
+What do Bluetooth, WiFi, and cellular networks have in common?
+They all rely on radio waves (of various wavelengths)
+
+What is ISP peering?
+ISPs pay their upstream providers based on traffic. To save costs, they sometimes join their networks together directly. IXPs (Internet Exchange Points) are meeting points where multiple ISPs can peer.
+
+What is a queueing delay?
+Most packet switches use store-and-forward transmission at their inbound links, necessitating temporary storage of packets. Queueing delay occurs when an outgoing link is already busy transmitting other packets in an outgoing link queue.
+
+What is an upper-tier ISP?
+ISPs that provide access to end systems must also be interconnected. Examples: Level 3 Communications, AT&amp;T, Sprint
+
+What is the first packet switch in a wireless LAN called?
+Access Point
+
+What is the formula for traffic intensity?
+La/R L = size of each packet in bits a = average packets/sec R = transmission rate, bits/sec Keep traffic intensity &lt; 1.
+
+When can propagation delay be a factor?
+It can be 100s of milliseconds for two routers connected by geostationary satellite link. For routers in the same access network it'll be negligible - a couple microseconds.
+
+When might transmission delay be a factor?
+When broadcasting a large packet over a low transmission rate link it could be in the 100s of milliseconds. Typically negligible for transmission rates of 10+ Mbps.
+
+When might transmission delay be a factor?
+When broadcasting a large packet over a low transmission rate link it could be in the 100s of milliseconds. Typically negligible for transmission rates of 10+ Mbps.
+
+Why is processing delay important?
+It's negligible for an individual packet, but strongly influences a routers max throughput.
+
 What is the core tradeoff in a distributed hash table?
 The number of neighbors a peer has to track
 The number of messages a peer must send to resolve a query ("Who is responsible for hashed key 13?")

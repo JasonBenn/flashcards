@@ -1,3 +1,15 @@
+Fetch a model data from Backbone, specifying that the backend use the serializer_action_classes.nested_for_seminar serializer.
+model.fetch({ action: 'nested-for-seminar' })
+
+How do you set the log level of Minerva's integration test suite to DEBUG?
+scripts/integrate --verbosity 5
+
+What class properties belong on a ViewSet?
+model serializer_class serializer_action_classes (added by Brian) permission_classes
+
+What setting in a DefaultSerializer allows for inefficient nesting of models, and why is this important?
+self.context["allow_duplicates"] = True Sometimes multiple models expect this thing to be nested. Preventing duplicates serializes them so that one the first gets the model nested.
+
 Lots of migration-related looking test failures on ./scripts/serverunit?
 Turn off REUSE_DB=1 and remigrate the DB. You can use it again afterwards.
 Server unit environment = local.
