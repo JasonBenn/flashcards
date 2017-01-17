@@ -1,3 +1,13 @@
+source:
+prompt:
+answer:
+
+https://docs.python.org/2/howto/descriptor.html
+
+
+https://greenlet.readthedocs.org/en/latest/
+
+
 Display the differences between an environment and Django's default settings
 manage.py diffsettings
 
@@ -14,7 +24,7 @@ How do you create a timezone-aware datetime?
 from django.utils import timezone timezone.now()
 
 Inspect Python's import search path?
-import sys 
+import sys
 sys.path
 
 List Django packages installed in your current environment?

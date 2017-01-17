@@ -2,22 +2,22 @@
 2>1 redirects stderr in a file named 1 2>&1 redirects stderr to stdout & in the context of redirects means file descriptors. So &1 is stdout.
 
 Change a file access and modification times (atime, mtime)
-touch 
+touch
 Can also set them to arbitrary value or to match another file
 
 Copies files between hosts on a network Works over a secure connection (SSH)
 scp
 
 Displays various networks related information such as open connections, open socket ports etc
-List all ports `netstat -a` 
-List all listening ports `netstat -l` 
-List listening TCP ports `netstat -t` 
+List all ports `netstat -a`
+List all listening ports `netstat -l`
+List listening TCP ports `netstat -t`
 Display PID and program names for a specific port `netstat -p {PROTOCOL}`
 
 Dump traffic on a network
-tcpdump 
-capture the traffic from a specific interface, source, destination and port: 
-tcpdump -i [eth0] src [192.168.1.1] dest [192.168.1.2] and port 80 
+tcpdump
+capture the traffic from a specific interface, source, destination and port:
+tcpdump -i [eth0] src [192.168.1.1] dest [192.168.1.2] and port 80
 capture the traffic from or to a host tcpdump host [www.example.com]
 
 How do you redirect STDERR to STDOUT?
@@ -106,6 +106,9 @@ mysql [database_name] &lt; [script.sql]
 
 Find files under the given directory tree, recursively
 find find files by extension find [root_path] -name ['*.py'] find files using case insensitive name matching, of a certain size find [root_path] -size +500k -size -10MB -iname ['*.TaR.gZ'] find files modified since a certain time find [root_path] -name ['*.py'] -mtime [-1d]
+
+Find and move anything in the current dir older than 1 year and move it into archive/
+find . -depth 1 ! -newerct '1 year ago' -exec "echo mv {} archive/" \;
 
 Finds duplicate files in a given set of directories
 fdupes
