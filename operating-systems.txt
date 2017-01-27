@@ -194,3 +194,16 @@ strace on linux, dtruss on OSX
 Bash:
 Last word on previous line?
 !$
+
+screen: list
+screen -ls
+
+screen: start:
+screen -S
+
+screen: resume:
+screen -r (most recent if 1, also takes pid argument)
+screen -R (most recent)
+
+screen: quit:
+???

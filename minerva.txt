@@ -17,6 +17,11 @@ Server unit environment = local.
 Integration test logs?
 logs/integration_4000.log
 
+Use Mixins on Backbone models and views?
+Cocktail.mixin()
+
+
+
 --- TO DO ---
 
 AWS:

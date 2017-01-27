@@ -11,6 +11,10 @@ https://greenlet.readthedocs.org/en/latest/
 Display the differences between an environment and Django's default settings
 manage.py diffsettings
 
+Roll back a migration?
+server/manage.py migrate seminar 0073
+(seminar is appname)
+
 What are Django's five log levels?
 DEBUG, INFO, WARN(ING), ERROR, CRITICAL
 
@@ -21,7 +25,8 @@ Enter/exit a virtualenv?
 workon $VIRTUALENV deactivate
 
 How do you create a timezone-aware datetime?
-from django.utils import timezone timezone.now()
+from django.utils import timezone
+timezone.now()
 
 Inspect Python's import search path?
 import sys
@@ -37,3 +42,18 @@ s(tep)
 
 Commonly imported Django modules?
 
+
+BIG IDEAS:
+
+Model field reference: 
+Field attribute reference
+Model _meta API
+Related objects reference
+Model class reference
+Model Meta options
+Model instance reference
+QuerySet API reference
+Lookup API reference
+Query Expressions
+Conditional Expressions
+Database Functions
