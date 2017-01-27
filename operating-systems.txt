@@ -24,7 +24,7 @@ How do you redirect STDERR to STDOUT?
 2>&1
 
 How do you redirect both STDERR and STDOUT to a file?
-(echo stdout; echo stderr 1>&2) &> file OR: tail > file 2&>1
+(echo stdout; echo stderr 1>&2) tail > file 2&>1
 
 Less: jump to 90% through the file? Open file at 90%?
 90p less +90p today.log
