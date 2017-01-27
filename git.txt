@@ -1,0 +1,18 @@
+Squash a few commits from the last 10 commits	git rebase -i HEAD~10	
+Discard local changes in a specific file	git checkout HEAD &lt;file&gt;	
+Revert a commit (by producing a new commit with contrary changes)	git revert &lt;commit&gt;	
+Reset HEAD pointer to a previous commit, and...<div>discard all changes since then</div>	git reset --hard &lt;commit&gt;	
+Reset HEAD pointer to a previous commit, and...<div>preserve all changes as unstaged changes</div>	git reset &lt;commit&gt;	
+Reset HEAD pointer to a previous commit, and...<div>preserve all uncommitted local changes</div>	git reset --keep &lt;commit&gt;	
+Merge branch into current HEAD	git merge &lt;branch&gt;	
+Should you ever 'pull'?	NO. Fetch, read the commits with log, and make a decision about how to incorporate those commits.	
+You're reading commits. You notice you have duplicated someone else's work. Solution?	<div>Reset --soft, on top of their remote branch.</div><div><br></div>git reset --soft origin/feature_x<div><br></div><div>Then rewrite your commits.</div>	
+Aaron wrote 4 commits, pushed them to feature_x first. My commits would sit cleanly under his. Cmd?	(fetch, log)<div>git rebase origin/feature_x</div>	
+Git is meant to track ____, not ____.	changes, history	
+DAG	direct and acyclic graph<div><br></div><div>DIRECT/ACYCLIC:</div><div>directional. children know parents. Parents don't know children.</div><div><br></div><div>GRAPH:<br><div>(graph: n parents, n children,</div><div>tree: 1 parent, n children,</div><div>list: 1 parent, 1 child)</div></div>	
+Git is NOT a sync tool, NOT a backup tool. Git is an ______	editor for changes.	
+What should your first 3 commits be?	1: generated code<div>2: README with Job To Be Done</div><div>3: dependencies.</div>	
+What does the -- argument mean?	Everything after me is a filename	
+Show remotes (am I connected to Heroku?)	remote show	
+"                              <p style=""margin-bottom: 0in"">To re-add a deleted commit?</p>"	reflog, hard 1a81dc9	
+Clean untracked files from working copy in git?	<div>git clean --dry-run</div><div>git clean -fd (force, directories)</div>	

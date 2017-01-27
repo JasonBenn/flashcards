@@ -1,0 +1,19 @@
+how do structs lay members out in memory?;;;by the member type alignment requirements (worst is pointers on x86: must start on address divisible by 64).
+
+how should you arrange struct members to minimize chance of cache miss?;;;largest to smallest: largest types have strictest alignment requirements. check w sizeof().
+
+gdb: examine memory?;;x/20i $pc; string (s), chars (c), decimal (d), unsigned decimal (u), binary (t), address (a)<br>size letters: bytes (b), word (w) <br>can use negative #s, register addresses
+
+gdb: show location in program;;list;can also add line #
+
+gdb: next instruction?<br>next instruction in main()?<br>next breakpoint?;;next<br>step<br>continue;
+
+gdb: p vs x?;;;p understands variables and how to print them<br>x just shows raw bytes at a location
+
+gdb: set a watch at an instruction or when someone reads a value;;watch i<br>rwatch;
+
+gdb: list/delete breakpoints and watchpoints;;info breakpoints/watchpoints<br>delete 1;
+
+gdb: read the stack trace at your current location<br>switch to a different frame;;bt<br>frame 1;("backtrace")
+
+gdb: set a variable's value;;set var i=1;
