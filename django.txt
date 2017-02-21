@@ -1,0 +1,22 @@
+
+
+TODO:
+
+Permissions systems in Python.
+
+https://github.com/minervaproject/picasso/pull/2124
+
+django.contrib.auth:
+- permission bools (analogous to capabilities)
+- groups: a label and bag of permissions for users
+- "pluggable backend system"
+
+components:
+- django.contrib.auth: core of framework, including some default models (user?)
+- django.contrib.contenttypes: "allows permissions to be associated to models"
+    - Allows polymorphic relationships. On the object that can be associated with anything, do:
+  content_type = models.ForeignKey(ContentType)
+  object_id = models.PositiveIntegerField()
+  content_object = generic.GenericForeignKey()
+        - And on the things with comments, do comments = generic.GenericRelation('Comment')
+    - works because the package automatically creates an instance of ContentType for each model you have, and provides methods for fetching the actual model given a ContentType instance. This way, with a FK to ContentType, an instance can relate 
