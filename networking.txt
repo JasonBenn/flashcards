@@ -1,222 +1,69 @@
-What protocol layer is SSL?
-Trick question, it's not a protocol, it's just two application-level decorator functions for the TCP socket API. (Sending host pushes data into SSL's socket-like API. SSL encrypts and pushes into TCP socket API. Receiving host receives data from TCP socket, passes to SSL socket-like API, decrypts, passes to application.)
+Symmetric key vs public key systems?;Symmetric: identical private key.<br/>Public: one known to whole world, private key known only to one.
 
----
+Two kinds of symmetric encryption?;Stream ciphers, block ciphers
 
-path: networking-cryptography
-front: At each node along a path, a packet suffers delays. What are the 4 most important kind of delays?
-back: Nodal processing - examine headers, decide where to send it Queueing - before transmitting on to a link Transmission - link transmission rate/packet size Propagation - propagation speed of the link
-studied: [13513663, 13637358, 13637899, 135135135]
+How does a block cipher work?;Symmetric. Complete mapping of k bits to k random bits. Typically 64+ bits.
 
----
+Prevent attacker from breaking block cipher by recognizing "HTTP/1.1" in two messages?;XOR each block w random bits before encrypting, send those bits in plaint text.<br/>First message contains the plaintext pattern: the "Initialization Vector"
 
-path: networking-cryptography
-front: Best defense against attackers masquerading as someone a host trusts?
-back: End-point authentication, which allows us to say with certainty who is sending us packets.
-studied: [13513663, 13637358, 13637899m]
+How does public/private key encryption basically work?;To send a message to Bob: find his public key, encrypt w algorithm and key, only he can decrypt with his private key.
 
----
+Problems introduced by public/private key encryption?;1) chosen-plaintext attack?<br/>2) Unlike symmetric encryption, we don't know who sent msg.
 
-path: networking-cryptography
-front: Best defense against packet sniffing?
-back: Cryptography
-studied: [13513663, 13637358]
+RSA & AES?;canonical public key & symmetrical key crypto<br/>RSA is expensive: often used to communicate secret session key for cheaper AES
 
----
+Message integrity concerns?;actually came from sender, wasn't tampered with en route
 
-path: networking-routing
-front: How does a router map destination addresses (or portions thereof) to its outgoing links?
-back: With a forwarding table.
-studied: [13513663, 13637358]
+5 properties of good cryptographic hash function?;FDISC<br/>Fast, Deterministic, Infeasible to get msg except by trying all msgs, Small changes make unrecognizable, Collisions unlikely<br/>MD5, SHA-1, SHA-3, BLAKE2
 
----
+How are block ciphers typically implemented?;As functions.<br/>Would be too expensive to store mapping table of i.e. 2^64 mappings, so use function to simulate, seeded by key.<br/>Example: AES-128/256
 
-path: networking-routing
-front: Three types of DoS attacks?
-back: Vulnerability attack - send the right messages to a vulnerable app, make the app or the host crash Bandwidth flooding - send tons of packets, legit packets are dropped Connection flooding - bog them down with bogus TCP connections, host stops accepting legit connections.
-studied: [13513663, 13637358, 13637899m]
+What is an upper-tier ISP?;ISPs that provide access to end systems must also be interconnected. Examples: Level 3 Communications, AT&T, Sprint
 
----
+What is the first packet switch in a wireless LAN called?;Access Point
 
-Virus vs worm?
-Virus requires user interaction to infect the device, worms don't. (user might be running vulnerable application in which attacker can just send malware)
+What are the benefits of radio channels carrying signals in the electromagnetic spectrum?;They can penetrate walls and potentially travel long distances
 
----
+What do Bluetooth, WiFi, and cellular networks have in common?;They all rely on radio waves (of various wavelengths)
 
-What are some features that TCP implements that UDP does not?
-Congestion control, flow control, reliable data transfer
+What is a queueing delay?;Most packet switches use store-and-forward transmission at their inbound links, necessitating temporary storage of packets. Queueing delay occurs when an outgoing link is already busy transmitting other packets in an outgoing link queue.
 
----
+How does a router map destination addresses (or portions thereof) to its outgoing links?;With a forwarding table.
 
-What are the benefits of radio channels carrying signals in the electromagnetic spectrum?
-They can penetrate walls and potentially travel long distances
+What is ISP peering?;ISPs pay their upstream providers based on traffic. To save costs, they sometimes join their networks together directly. IXPs (Internet Exchange Points) are meeting points where multiple ISPs can peer.
 
----
+At each node along a path, a packet suffers delays. What are the 4 most important kind of delays?;Nodal processing - examine headers, decide where to send it<div>Queueing - before transmitting on to a link</div><div>Transmission - link transmission rate / packet size</div><div>Propagation - propagation speed of the link</div>
 
-What are the terms for the relationship between an access ISP and a global transit ISP?
-A customer and a provider. Customer pays provider based on traffic exchanged with provider.
+When might transmission delay be a factor?;When broadcasting a large packet over a low transmission rate link it could be in the 100s of milliseconds. Typically negligible for transmission rates of 10+ Mbps.
 
----
+When can propagation delay be a factor?;It can be 100s of milliseconds for two routers connected by geostationary satellite link. For routers in the same access network it'll be negligible - a couple microseconds.
 
-What do Bluetooth, WiFi, and cellular networks have in common?
-They all rely on radio waves (of various wavelengths)
+Why is processing delay important?;It's negligible for an individual packet, but strongly influences a routers max throughput.
 
----
+Virus vs worm?;Virus requires user interaction to infect the device, worms don't. (user might be running vulnerable application in which attacker can just send malware)
 
-What is ISP peering?
-ISPs pay their upstream providers based on traffic. To save costs, they sometimes join their networks together directly. IXPs (Internet Exchange Points) are meeting points where multiple ISPs can peer.
+Three types of DoS attacks?;Vulnerability attack - send the right messages to a vulnerable app, make the app or the host crash<div>Bandwidth flooding - send tons of packets, legit packets are dropped</div><div>Connection flooding - bog them down with bogus TCP connections, host stops accepting legit connections.</div>
 
----
+Best defense against packet sniffing?;Cryptography
 
-What is a queueing delay?
-Most packet switches use store-and-forward transmission at their inbound links, necessitating temporary storage of packets. Queueing delay occurs when an outgoing link is already busy transmitting other packets in an outgoing link queue.
+Best defense against attackers masquerading as someone a host trusts?;End-point authentication, which allows us to say with certainty who is sending us packets.
 
----
+<div>What protocol layer is SSL?</div>;"Trick question, it's not a protocol, it's just two application-level decorator functions for the TCP socket API.<div><br></div><div><span style=""font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px;"">(Sending host pushes data into SSL's socket-like API. SSL encrypts and pushes into TCP socket API. Receiving host receives data from TCP socket, passes to SSL socket-like API, decrypts, passes to application.)</span><br></div>"
 
-What is an upper-tier ISP?
-ISPs that provide access to end systems must also be interconnected. Examples: Level 3 Communications, AT&amp;T, Sprint
+What are some features that TCP implements that UDP does not?;Congestion control, flow control, reliable data transfer
 
----
+The simplest tool to perform a load testing;ab (Apache Benchmarking tool)<div><br /></div><div><div>Execute 100 HTTP GET requests to given URL.</div><div>ab -n 100 {url}</div><div><br /></div><div>Execute 100 HTTP GET requests, processing up to 10 requests concurrently, to given URL.</div><div>ab -n 100 -c 10 {url}</div></div>
 
-What is the first packet switch in a wireless LAN called?
-Access Point
+DNS lookup utility;dig<div><br /></div><div><div>Lookup the IP(s) associated with a hostname (A records)</div><div>dig +short {hostname.com}</div><div><br /></div><div>Specify an alternate DNS server to query (8.8.8.8 is google's public DNS)</div><div>dig @8.8.8.8 {hostname.com}</div></div>
 
----
+Reads and writes TCP or UDP data;nc<div><br /></div><div><div>listen on a specified port</div><div>nc -l {port}</div><div><br /></div><div>connect to a certain port (you can then write to this port)</div><div>nc {ip_address} {port}</div><div><br /></div><div>serve a file<br /></div><div>cat somefile.txt | nc -l {port}</div><div><br /></div><div>receive a file</div><div>nc {ip_address} {port} &gt; somefile.txt</div></div>
 
-What is the formula for traffic intensity?
-La/R L = size of each packet in bits a = average packets/sec R = transmission rate, bits/sec Keep traffic intensity &lt; 1.
+<div>send ICMP ECHO_REQUEST packets to network hosts</div>;ping<div><br /></div><div><div>Ping host limiting the number of packages to be send to four</div><div>ping -c 4 {host}</div><div><br /></div><div>Ping host, waiting for 0.5 s between each request (default is 1 s)</div><div>ping -i 0.5 {host}</div><div><br /></div><div>Ping host without trying to lookup symbolic names for addresses</div><div>ping -n {host}</div></div>
 
----
+<div>Dump traffic on a network</div>;tcpdump<div><br /></div><div><div>capture the traffic from a specific interface, source, destination and port</div><div>tcpdump -i {eth0} src {192.168.1.1} dest {192.168.1.2} and port 80</div></div><div><br /></div><div><div>capture the traffic from or to a host</div><div>tcpdump host {www.example.com}</div></div>
 
-When can propagation delay be a factor?
-It can be 100s of milliseconds for two routers connected by geostationary satellite link. For routers in the same access network it'll be negligible - a couple microseconds.
+<div>Print the route packets trace to network host</div>;traceroute {host}
 
----
+Look at open network connections;all listening ports: <code>netstat -l</code><br/>listening TCP ports: <code>netstat -p tcp</code>
 
-When might transmission delay be a factor?
-When broadcasting a large packet over a low transmission rate link it could be in the 100s of milliseconds. Typically negligible for transmission rates of 10+ Mbps.
-
----
-
-When might transmission delay be a factor?
-When broadcasting a large packet over a low transmission rate link it could be in the 100s of milliseconds. Typically negligible for transmission rates of 10+ Mbps.
-
----
-
-Why is processing delay important?
-It's negligible for an individual packet, but strongly influences a routers max throughput.
-
----
-
-What is the core tradeoff in a distributed hash table?
-The number of neighbors a peer has to track
-The number of messages a peer must send to resolve a query ("Who is responsible for hashed key 13?")
-
----
-
-What happens when a peer in a distributed hash table can't answer a query?
-It hashes the question and asks a neighbor (a nearby peer) that might know the answer.
-
----
-
-What is a BitTorrent tracker?
-A distributed hash table of currently living peers.
-
----
-
-How does the transport layer check for errors?
-Sending host: checksum the packet, put in checksum header field
-Receiving host: checksum the packet, add it to sending checksum, does it equal 11111111?
-
----
-
-What are the well-known port numbers?
-0 to 1023.
-HTTP: 80
-HTTPS: 443
-SSH: 22
-
----
-
-What's the relationship between ports and sockets?
-TCP receives messages at a port, a demultiplexes them to a socket based on the 4-tuple (src-ip, src-port, dest-ip, dest-port)
-
----
-
-How are UDP and TCP demultiplexing different?
-TCP demultiplexing is complex - there can be many TCP sockets for a port. Identifiable by 4 tuple.
-UDP demultiplexing is simpler - there's only ever one UDP socket for a port. Identifiable by (dest ip, dest port)
-
----
-
-How does TCP determine a timeout interval?
-A weighted moving average of estimated round-trip times between packet transmission and ACK, plus some multiple of the EstRTTs variance (like 4).
-
----
-
-How many ports are there?
-It's a 16 bit number, so 65,535 (0 counts).
-
----
-
-Why does TCP set initial sequence numbers randomly during the 3-way handshake?
-To reduce the probability that incorrect data is ACK'd - there could be stray packets still in the network from a previous, ended TCP connection between those two hosts and ports.
-
----
-
-What's the difference between flow control and congestion control?
-Flow control: don't let sender overwhelm receiver (receiving application is slow reading data from the receiving buffer)
-Congestion control: don't let sender overwhelm network
-
----
-
-What problem does the Go-Back-N protocol solve?
-Identifying missing data. Go-Back-N implementers ACK the last in-order received byte, even if they've received later bytes, out-of-order.
-(Most TCP implementers ACK missing segments selectively, as it requires less network traffic)
-
----
-
-Flow control: what does the sender need to know from the client to make overflowing the receiving buffer impossible?
-The receiving buffer's free space - the amount of unacknowledged data in the network (LastByteSent - LastByteAcked)
-
----
-
-What is included in a SYN packet?
-Client's random initial sequence number
-SYN bit = 1
-
----
-
-What happens when a TCP server receives a SYN packet?
-1. Allocates a buffer and a port for the connection
-2. Set the acknowledgment field to client's initial sequence number + 1
-3. Chooses its own ISN
-
----
-
-How does the client respond to a SYNACK packet?
-1. Allocates a buffer and port for the connection
-2. Sets the acknowledgment field to the server's initial sequence number + 1
-2. Optionally sends data.
-
----
-
-What are the 6 flag bits in a TCP packet's header?
-SYN
-RST
-FIN
-ACK (acknowledgment number field is valid)
-URG (urgent, not used)
-PSH (pass to application layer now, not used)
-
----
-
-What is the conditional GET?
-A request that might return 304 Not Modified.
-Caching could be implemented using:
-Date modified (Resp: Last-Modified, Req: If-Modified-Since)
-ETags (Req: If-None-Match, Resp: ETag)
-Cache-Control (Req+Res: "Cache-Control: max-age=120").
-
----
-
+Find all files open by a process?;<code>lsof -c mysq</code><br/>list open files by procs starting w characters<br/><div>^__ negates, /__/ for regex

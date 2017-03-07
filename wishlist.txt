@@ -1,1 +1,32 @@
-bradfield week 1
+Networking: 8.3
+
+HMAC/MAC?
+
+Digital signature vs MAC?
+
+How is a digital signature implemented?
+
+Certificate authority?;
+
+Certificate?
+
+PGP: email, block cipher
+
+SSL/TLS: TCP, SSL is block cipher
+Read? https://tools.ietf.org/html/rfc5246
+
+IPSec: IP, block cipher
+
+WPA?
+
+
+
+
+
+Bradfield: DATABASES
+
+What are the properties of popular databases?
+
+Things useful for interpreting query plans?
+
+Components of DB?
