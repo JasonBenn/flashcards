@@ -6,7 +6,7 @@ Signatures vs MACs, implementation?;MAC is a hash that uses symmetric key, signa
 
 Signatures vs MACs, tradeoffs?;Don't need to distribute secret key.<br/>Verifiable by anyone, so adds non-repudiation.<br/>MAC several orders of magnitude faster.
 
-3 security goals for hash/MAC/signature?;Integrity (unmodified?)<br/>Authentication (from sender?)<br/>Non-repudiation (forwarded msgs still authenticated?)<br/>
+3 security goals for hash/MAC/signature?;Integrity (unmodified?)<br/>Authentication (from sender?)<br/>Non-repudiation (forwarded msgs still authenticated?)
 
 Digital signature implementation?;Decrypt hash with private key. Recipient encrypts with public key. Result = msg hash!
 
@@ -20,7 +20,7 @@ Symmetric key vs public key systems?;Symmetric: identical private key.<br/>Publi
 
 Two kinds of symmetric encryption?;Stream ciphers, block ciphers
 
-How does a block cipher work?;Symmetric. Complete mapping of k bits to k random bits. Typically 64+ bits.
+How does a block cipher work?;Maps k bits in source to k random bits from mapping table. Typically 64+ bits, and table is simulated by function bc memory.
 
 Prevent attacker from breaking block cipher by recognizing "HTTP/1.1" in two messages?;XOR each block w random bits before encrypting, send those bits in plaint text.<br/>First message contains the plaintext pattern: the "Initialization Vector"
 
@@ -50,7 +50,7 @@ How does a router map destination addresses (or portions thereof) to its outgoin
 
 What is ISP peering?;ISPs pay their upstream providers based on traffic. To save costs, they sometimes join their networks together directly. IXPs (Internet Exchange Points) are meeting points where multiple ISPs can peer.
 
-At each node along a path, a packet suffers delays. What are the 4 most important kind of delays?;Nodal processing - examine headers, decide where to send it<div>Queueing - before transmitting on to a link</div><div>Transmission - link transmission rate / packet size</div><div>Propagation - propagation speed of the link</div>
+At each node along a path, a packet suffers delays. What are the 4 most important kind of delays?;Nodal processing - examine headers, decide where to send it<br/>Queueing - before transmitting on to a link<br/>Transmission - link transmission rate / packet size<br/>Propagation - propagation speed of the link
 
 When might transmission delay be a factor?;When broadcasting a large packet over a low transmission rate link it could be in the 100s of milliseconds. Typically negligible for transmission rates of 10+ Mbps.
 
@@ -60,28 +60,28 @@ Why is processing delay important?;It's negligible for an individual packet, but
 
 Virus vs worm?;Virus requires user interaction to infect the device, worms don't. (user might be running vulnerable application in which attacker can just send malware)
 
-Three types of DoS attacks?;Vulnerability attack - send the right messages to a vulnerable app, make the app or the host crash<div>Bandwidth flooding - send tons of packets, legit packets are dropped</div><div>Connection flooding - bog them down with bogus TCP connections, host stops accepting legit connections.</div>
+Three types of DoS attacks?;Vulnerability attack - send the right messages to a vulnerable app, make the app or the host crash<br/>Bandwidth flooding - send tons of packets, legit packets are dropped<br/>Connection flooding - bog them down with bogus TCP connections, host stops accepting legit connections.
 
 Best defense against packet sniffing?;Cryptography
 
 Best defense against attackers masquerading as someone a host trusts?;End-point authentication, which allows us to say with certainty who is sending us packets.
 
-<div>What protocol layer is SSL?</div>;"Trick question, it's not a protocol, it's just two application-level decorator functions for the TCP socket API.<div><br></div><div><span style=""font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px;"">(Sending host pushes data into SSL's socket-like API. SSL encrypts and pushes into TCP socket API. Receiving host receives data from TCP socket, passes to SSL socket-like API, decrypts, passes to application.)</span><br></div>"
-
 What are some features that TCP implements that UDP does not?;Congestion control, flow control, reliable data transfer
 
-The simplest tool to perform a load testing;ab (Apache Benchmarking tool)<div><br /></div><div><div>Execute 100 HTTP GET requests to given URL.</div><div>ab -n 100 {url}</div><div><br /></div><div>Execute 100 HTTP GET requests, processing up to 10 requests concurrently, to given URL.</div><div>ab -n 100 -c 10 {url}</div></div>
+The simplest tool to perform a load testing;ab (Apache Benchmarking tool)<br/>Execute 100 HTTP GET requests to given URL.<br/>ab -n 100 {url}<br/>Execute 100 HTTP GET requests, processing up to 10 requests concurrently, to given URL.<br/>ab -n 100 -c 10 {url}
 
-DNS lookup utility;dig<div><br /></div><div><div>Lookup the IP(s) associated with a hostname (A records)</div><div>dig +short {hostname.com}</div><div><br /></div><div>Specify an alternate DNS server to query (8.8.8.8 is google's public DNS)</div><div>dig @8.8.8.8 {hostname.com}</div></div>
+DNS lookup utility;dig<br/>Lookup the IP(s) associated with a hostname (A records)<br/>dig +short {hostname.com}<br/>Specify an alternate DNS server to query (8.8.8.8 is google's public DNS)<br/>dig @8.8.8.8 {hostname.com}
 
-Reads and writes TCP or UDP data;nc<div><br /></div><div><div>listen on a specified port</div><div>nc -l {port}</div><div><br /></div><div>connect to a certain port (you can then write to this port)</div><div>nc {ip_address} {port}</div><div><br /></div><div>serve a file<br /></div><div>cat somefile.txt | nc -l {port}</div><div><br /></div><div>receive a file</div><div>nc {ip_address} {port} &gt; somefile.txt</div></div>
+Reads and writes TCP or UDP data;nc<br/>listen on a specified port<code>nc -l {port}</code><br/>connect to a certain port (you can then write to this port)<code>nc {ip_address} {port}</code><br/>serve a file<code>cat somefile.txt | nc -l {port}</code><br/>receive a file<code>nc {ip_address} {port} > somefile.txt</code>
 
-<div>send ICMP ECHO_REQUEST packets to network hosts</div>;ping<div><br /></div><div><div>Ping host limiting the number of packages to be send to four</div><div>ping -c 4 {host}</div><div><br /></div><div>Ping host, waiting for 0.5 s between each request (default is 1 s)</div><div>ping -i 0.5 {host}</div><div><br /></div><div>Ping host without trying to lookup symbolic names for addresses</div><div>ping -n {host}</div></div>
+send ICMP ECHO_REQUEST packets to network hosts;ping<br/>Ping host limiting the number of packages to be send to four<br/>ping -c 4 {host}<br/>Ping host, waiting for 0.5 s between each request (default is 1 s)<br/>ping -i 0.5 {host}<br/>Ping host without trying to lookup symbolic names for addresses<br/>ping -n {host}
 
-<div>Dump traffic on a network</div>;tcpdump<div><br /></div><div><div>capture the traffic from a specific interface, source, destination and port</div><div>tcpdump -i {eth0} src {192.168.1.1} dest {192.168.1.2} and port 80</div></div><div><br /></div><div><div>capture the traffic from or to a host</div><div>tcpdump host {www.example.com}</div></div>
+Dump traffic on a network;tcpdump<br/>capture the traffic from a specific interface, source, destination and port<br/>tcpdump -i {eth0} src {192.168.1.1} dest {192.168.1.2} and port 80<br/>capture the traffic from or to a host<br/>tcpdump host {www.example.com}
 
-<div>Print the route packets trace to network host</div>;traceroute {host}
+Print the route packets trace to network host;traceroute {host}
 
 Look at open network connections;all listening ports: <code>netstat -l</code><br/>listening TCP ports: <code>netstat -p tcp</code>
 
-Find all files open by a process?;<code>lsof -c mysq</code><br/>list open files by procs starting w characters<br/><div>^__ negates, /__/ for regex
+Find all files open by a process?;<code>lsof -c mysq</code><br/>list open files by procs starting w characters<br/>^__ negates, /__/ for regex
+
+What protocol layer is SSL?;"Trick question, it's not a protocol, it's just two application-level decorator functions for the TCP socket API.<br/>(Sending host pushes data into SSL's socket-like API. SSL encrypts and pushes into TCP socket API. Receiving host receives data from TCP socket, passes to SSL socket-like API, decrypts, passes to application.)
