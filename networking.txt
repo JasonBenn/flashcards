@@ -1,3 +1,21 @@
+PGP?;Email. Symmetric keys, public keys, signatures. P2P public keys instead of CA!
+
+What are TLS, WPA, IPSec used for?;Transport layer, wifi, IP.
+
+Signatures vs MACs, implementation?;MAC is a hash that uses symmetric key, signature is hash that uses public key.
+
+Signatures vs MACs, tradeoffs?;Don't need to distribute secret key.<br/>Verifiable by anyone, so adds non-repudiation.<br/>MAC several orders of magnitude faster.
+
+3 security goals for hash/MAC/signature?;Integrity (unmodified?)<br/>Authentication (from sender?)<br/>Non-repudiation (forwarded msgs still authenticated?)<br/>
+
+Digital signature implementation?;Decrypt hash with private key. Recipient encrypts with public key. Result = msg hash!
+
+Certificate authority?;Digitally sign certificates with their public keys.<br/>Everyone agrees they're trustworthy and good at issuing certs.
+
+Certificate?;Associates public key with owner, signed by CA.
+
+How to beat a playback attack?;Use a nonce (will never be seen again) in new communications.
+
 Symmetric key vs public key systems?;Symmetric: identical private key.<br/>Public: one known to whole world, private key known only to one.
 
 Two kinds of symmetric encryption?;Stream ciphers, block ciphers
