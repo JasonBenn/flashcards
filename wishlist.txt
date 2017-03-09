@@ -5,3 +5,13 @@ What are the properties of popular databases?
 Things useful for interpreting query plans?
 
 Components of DB?
+
+Shared-nothing?
+
+Shard-per-core?
+
+Dynamo?
+
+Cassandra? Decentralized,
+
+Throughput vs latency as you distribute?
