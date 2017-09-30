@@ -1,7 +1,0 @@
-Inspect Backbone Relational's cache of objects?
-Backbone.Relational.store
-
-
-TODO:
-
-ViewSet action classes: should be underscored, whereas Backbone Relational relations should be hyphenated.

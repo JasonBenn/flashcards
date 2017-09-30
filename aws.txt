@@ -1,2 +1,0 @@
-Difference between Security Groups and ACLs?;They're both firewalls. SGs are attached to instances, ACLs are attached to subnets.
-Components of a VPC?;Internet Gateway, route tables, (ACLs), subnets, (Security Groups), instances.
