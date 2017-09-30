@@ -1,0 +1,9 @@
+How can you recognize overfitting?;;Training MSE is small, testing MSE is large.<br>Reduce the flexibility of your model.;
+
+Softmax?;;Function that provides a probability for each of N classes, total is 1.;
+
+Perplexity?;;;
+
+Cross-entropy?;;;
+
+Log loss?;;;

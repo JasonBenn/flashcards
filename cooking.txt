@@ -1,0 +1,73 @@
+Parsley vs cilantro?;Parsley = garnish (light taste)<br/>Cilantro = key flavor (much stronger taste).<br/>Look very similar.
+
+What is homogenization?;Ensuring milk doesn't separate into cream and lowfat milk by decreasing size of fat globules, delaying agglomeration process.<br/>Achieved by smashing milk with high pressure/narrow tubes, cavitation (lightning claps after vacuum!), turbulence.<br/>Pasteurization critical: increased surface area means fat no longer covered by protective fat membranes, exposing it to milk enzymes that can produce rancid flavors: deactivate them with the heat.
+
+Creme fraiche?;Fattier sour cream (made from heavy cream).<br/>Thicker, richer, less tangy.<br/>Doesn't need additional thickeners.
+
+What is pasteurization?;Killing harmful microorganisms by heating milk for a short time, then cooling it.<br/>Decreases some vitamin content by 10-20%, none of them important.
+
+Curdling?;Clumping of milk proteins into curds (casein proteins), separates from whey (liquid).<br/>Milk proteins normally repel each other, but when more acidic they attract each other and clump.<br/>Heat, digestive enzyme rennin, making things more acidic all achieve this.
+
+Curdling vs separation?;Curdling is agglomeration of protein, separation agglomeration of fat.
+
+Emulsion?;Mixture of two unmixable liquids. Generally by dispersing one finely in the other.<br/>Milk, oil and water.
+
+What is a sour taste?;The presence of acidity.
+
+Dairy?;Any milk-based product.<br/>Milk, butter, cream, sour cream, cheese, whey/casein protein.
+
+What is cream?;Unhomogenized milk will separate: the butterfat/milkfat that rises is cream. Skimmed.
+
+Half & half vs sour cream vs whipping cream vs butter?;All skimmed from milk, mixed with milk: difference is how much fat is in each.<br/>Half/half: 10-18%<br/>light/sour cream: 18-30<br/>whipping cream: 30%+<br/>Butter: 80%+
+
+Sour cream?;Regular cream fermented slightly with lactic acid bacteria, which sours and thickens the cream.
+
+Broth vs stock?;Broth: simmered meats<br/>Stock: simmered bones.<br/>People use them interchangeably, it's a spectrum.
+
+Consommé vs broth?;Consommé: clarified broth (using egg whites: protein + fat makes a raft on top of broth).
+
+Clarifying?;Removing suspended solids from liquids.
+
+Fermentation?;Sugar-> acids, gases, or alcohol.<br/>Occurs in yeast, bacteria, oxygen-starved muscle cells (producing lactic acid! and energy).
+
+Braising?;Dry heat (sear sides), then moist heat (cover 2/3rds of food w braising liquid, cook in dutch oven for 2 hours).<br/>Goal is to break down tough connective tissue (collagen). Good for more affordable cuts!
+
+Pressure cooking vs slow cooking?;Pressure cooking: trap steam in pressurized vessel to simulate long braise in short time.<br/>Slow cooking: regular pressure/time.<br/>Any food which can be cooked in steam can be pressure cooked.
+
+Dutch oven vs slow cooker/crockpot?;Dutch oven: thick-walled pot with lid.<br/>Slow cooker/crockpot: types of dutch ovens.<br/>All used for braising.
+
+"Dry" wine?;No residual sugar (winemaker allowed fermentation to completely finish).
+
+Residual sugar in wine?;Winemaker stops fermenation before yeast eats all sugar.
+
+Chardonnay?;Green grape used to make white wine. Neutral flavor. Generally medium/light body, acidic, fruity.
+
+Bouillon vs bouillon cube vs bullion?;Bouillon: French word for broth (related to word for boil)<br/>Bouillon cube: dehydrated flavor cube<br/>Bullion: an ingot of precious metal
+
+Mirepoix?;Diced veggies (usually onions/carrots/celery) cooked without oil on low heat.<br/>Goal is to sweeten, not caramelize.
+
+Where does the word sautée come from?;From French "jump"/"bounce"
+
+How does cooking at high heat produce carcinogens? How do you mitigate?;Protein, sugar, creatine at high temp = HCAs: heterocyclic (2+ kinds of atoms in ring structures) amines (nitrogen-containing, think ammonia=NH4), a carcinogen.<br/>Precooking meat in microwave to reduce time under high heat can mitigate, as can the magic ingredients.
+
+How does grilling produce carcinogens? How do you mitigate the effect?; fat/juice dripping onto open fire cause flames containing PAHs that adhere to surface of meat.<br/>PAH: polycyclic (many rings) aromatic (organic (containing C) rings w delocalized (belonging to all, not 1) electrons, nothing to do w smell bc it was named in 1855) hydrocarbons (only H and C).<br/>Avoid by broiling, vertical grilling (heat source on side), grill that drains juice away from fire.
+
+Magic PCA/HCA formation reducing ingredients? (CGROVe);cherries, garlic, rosemary, olive oil, & Vitamin E. (relevant for meat at high temps)
+
+Sautée vs pan frying vs searing?;All use a small amount of liquid fat.<br/>Sautée: higher heat, small pieces, primary heat transfer is pan surface.<br/>Pan frying: typically larger pieces of meat, so use less heat to cook through, and more fat.<br/>Searing: high temp, quick, just trying to brown surface.
+
+Good oils for sautéing?;EVOO, avocado oil.
+
+Stove temperatures?;High: 375<br/>Medium: 300<br/>Low: 275<br/>Electric pans might go up to 400.
+
+Oils with low to high smoke points?;butter (300)<br/>coconut oil (350)<br/>EVOO (400)<br/>Avocado oil (500)
+
+Enzymatic browning vs nonenzymatic browning?;Enzymatic: enzymes + oxygen causing melanin production. Great for developing flavor/color in coffee, raisins! But also makes brown fruits/veggies.<br/>Nonenzymatic: browning via heat. Caramelization + Maillard reaction.
+
+Caramelization vs Maillard reaction?;Both nonenzymatic browning, can produce similar results to the eye, but totally different processes.<br/>Caramelization: charring of sugar.<br/>Maillard reaction: involves sugar + proteins.
+
+Root vegetables?;Plant roots eaten as veggies.<br/>Onions, shallots, yams, potatoes, carrots, radish, beets.
+
+Roasting vs grilling?;Roasting: indirect, diffuse heat (fire or oven). Longer (1-3 hours).<br/>Grilling: direct, radiant heat. Cooks quickly.
+
+Grilling vs broiling?;Grilling: heat from below.<br/>Broiling: heat from above<br/>Both direct, radiant heat, cook quick.

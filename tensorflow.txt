@@ -1,0 +1,5 @@
+What is a tensor?;;A matrix with an arbitrary # of dimensions. Lazily evaluated.;
+
+What is tiling?;;When adding a 1D tensor to another, the 1D tensor is implicitly duplicated to match the other's shape.;
+
+Why always specify dimension to reduce across in reduction operations?;;Because it could help you catch a sneaky tiling bug.;

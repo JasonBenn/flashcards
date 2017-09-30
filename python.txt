@@ -1,59 +1,25 @@
-source:
-prompt:
-answer:
+Display the differences between an environment and Django's default settings;;;manage.py diffsettings
 
-https://docs.python.org/2/howto/descriptor.html
+Roll back a migration?;;;server/manage.py migrate seminar 0073
 
+What are Django's five log levels?;;DEBUG, INFO, WARN(ING), ERROR, CRITICAL;
 
-https://greenlet.readthedocs.org/en/latest/
+What are the four parts of Django's logging system?;;Loggers, Handlers, Filters, Formatters;
 
+How do you create a timezone-aware datetime?;;;from django.utils import timezone<br>timezone.now()
 
-Display the differences between an environment and Django's default settings
-manage.py diffsettings
+Inspect Python's import search path?;;;import sys<br/>sys.path
 
-Roll back a migration?
-server/manage.py migrate seminar 0073
-(seminar is appname)
+Step one line in ipdb;;;s(tep)
 
-What are Django's five log levels?
-DEBUG, INFO, WARN(ING), ERROR, CRITICAL
+IPython: list all variables + info;;;%whos
 
-What are the four parts of Django's logging system?
-Loggers, Handlers, Filters, Formatters
+IPython: display environment vars;;;%env
 
-Enter/exit a virtualenv?
-workon $VIRTUALENV deactivate
+What is the difference between a Python module and a package?;;Module: python file with functions (file) <br/>Package: directory with __init__.py, contians packages & modules (dir);
 
-How do you create a timezone-aware datetime?
-from django.utils import timezone
-timezone.now()
+Read all of the functions implemented by module `url`?;;;dir(url)
 
-Inspect Python's import search path?
-import sys
-sys.path
+How many layers of nesting does a decorator that takes arguments require?;;3;def outer_layer(takes_arguments):<br>....def second_layer(old_function):<br>........def inner_layer(*args, **kwds):<br>............new_function_work<br>........return inner_layer<br>....return second_layer
 
-List Django packages installed in your current environment?
-pip list
-
-Step one line in ipdb
-s(tep)
-
---- TO DO ---
-
-Commonly imported Django modules?
-
-
-BIG IDEAS:
-
-Model field reference: 
-Field attribute reference
-Model _meta API
-Related objects reference
-Model class reference
-Model Meta options
-Model instance reference
-QuerySet API reference
-Lookup API reference
-Query Expressions
-Conditional Expressions
-Database Functions
+/ vs //?;;Float division (py3 only) vs integer floor division.;

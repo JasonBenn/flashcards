@@ -1,0 +1,1 @@
+"Why use 2-part commit over Raft?<br>Raft requires less nodes to confirm!";;2 part commit requires everyone agree<br>Raft only requires majority agree<br>As a result, in Raft only leader can do reads or writes<br>2PC/3PC = anyone can read or write.;

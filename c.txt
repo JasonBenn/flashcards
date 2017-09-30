@@ -17,3 +17,5 @@ gdb: list/delete breakpoints and watchpoints;;info breakpoints/watchpoints<br>de
 gdb: read the stack trace at your current location<br>switch to a different frame;;bt<br>frame 1;("backtrace")
 
 gdb: set a variable's value;;set var i=1;
+
+Format output, send to string;;;sprintf

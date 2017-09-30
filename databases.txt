@@ -1,0 +1,44 @@
+NoSQL?;;New DBMSs optimized for distributed environment. Better availility, focus on fault tolerance, weak isolation guarantees.;
+
+Why is "NoSQL" ironic?;;They're mostly now adding SQL features, support for complex data models, and many RBDMS don't provide full serializability either.;
+
+Dynamo vs Cassandra?;;Dynamo = Amazon, Cassandra = open source Dynamo.<br>Both optimistically replicate, Dynamo lets user resolve divergent updates, Cassandra chooses later version (!).;
+
+Riak?;;Optimistic replicating highly available datastore, resolves conflicts automatically mergeable data types (CRDTs, commutative replicated data types).;
+
+SELECT ... FOR UPDATE?;;Explicitly lock a resource (reads and writes) until your transaction commits. Helpful for coherency in weak isolation environments (ensure FK instance exists before committing record);
+
+SELECT ... LOCK IN SHARE MODE?;;A locking select that allows reads. Useful for loose isolation modes.;
+
+Session guarantees?;;Intermediate isolation guarantee that users read their own writes, but not writes of other users.;
+
+Cost penalty to serializability?;;Up to two order of magnitude, ish.;
+
+MariaDB?;;Open-source fork of MySQL after acquisition by Oracle.;
+
+MongoDB?;;JSON documents. JavaScript queries. High availability w replicas. Eventually consistent reads from secondaries. Index on fields. Easy sharding.<br>Default insecure. Queries against indexes not atomic. Sometimes possible to roll back ack'd writes?!;
+
+Redis?;;In-memory key-value store. Backs up to FS every 2 seconds by default.;
+
+Show mysql activity?;;;mysqladmin -u root processlist
+
+Relation vs Table;;Relations are tables that connect other tables.;
+Insert data into person;;;INSERT INTO person VALUES (...)<br>or<br>INSERT INTO person(headers...)<br>VALUES (...)
+Add a line to a query that sorts by ascending/descending order;;ORDER BY last_name [DESC];
+Operator used in WHERE clause that looks between an inclusive range;;BETWEEN;
+Operator in a WHERE clause that searches for a pattern;;LIKE;
+Operator in a WHERE clause that specifies multiple possible values for a column;;IN;
+Select from employees when first name starts with A;;SELECT * FROM employees<br>WHERE first_name LIKE 'A%';
+WHERE composer_name is blank.;;WHERE composer_name IS NULL;
+Return the count of rows in invoices;;SELECT COUNT(*) FROM invoices;
+Find the # of customers grouped by country;;SELECT country, COUNT(*) FROM customers GROUP BY country;
+Left outer join vs full outer join;;Left outer join is all rows from table to the left of the LEFT OUTER JOIN keyword plus any matching rows in other table, with NULL corresponding to rows unique to left table.<br>Full outer join returns a table with all rows from both tables.;
+Inner join vs outer join;;Inner join contains only the intersection (no rows have NULL)<br>Outer join contains all rows from both tables (any rows exclusive to one table will have NULL value in other table's column);
+Basic format of UPDATE command?;;UPDATE/SET/WHERE;UPDATE users<br>SET nickname = 'Ninja Coder', last_name = 'Farmer'<br>WHERE id = 1
+How do you insert a column into an existing database?<br>;;ALTER TABLE ___<br>ADD COLUMN column_name VARCHAR(64);
+Fix this code;<br>WHERE COUNT(*) < 2;HAVING COUNT(*) < 2;
+Group records together who have matching fields (more than one);;;GROUP BY voter_id, politician_id
+Delete entries?;;;DELETE FROM ___<br>WHERE ...
+what's the problem?;SELECT TenantName FROM Tenants<br>GROUP BY TenantID;You can't GROUP BY a field you haven't selected.;
+When are relations created?;;After the SELECT and the WHERE. This is why you can filter a table with WHERE without selecting that field.;
+HAVING vs WHERE;;Filters an existing relation after it's been created and GROUP BY'd<br>WHERE filters a table before it's created.;

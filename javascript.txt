@@ -1,0 +1,28 @@
+What activities might take a long time and block an event loop?;;file access<br>network communication<br>database operations;
+Define non-blocking architecture;;Any potentially blocking activity is requested and put aside immediately, freeing the event loop (a server could handle other requests, for example)<br>When the results are ready, they're returned via callback function;
+What is currying?;;Using bind to create a delegating function with a fixed subset of the required arguments.;
+Arguments to Object.create();;1 prototype link<br>2 property descriptor map;
+Create an empty object without a prototype;;Object.create(null);
+What should I watch out for when omitting semicolons?;;Be careful: if the next line starts with + - [ ( or / no semicolon is inferred.<br>Especially common: (;
+What is a closure?;;A function that keeps track of variables defined in its containing scope.;
+How can closures update the values of their outer variables?;;Because they store references to their outer variables instead of copying their values.;
+What is the difference internally between regular functions and closures?;;Closures actually internally<br>store references to variables they may refer to later.;
+What is the one exception to JS' lack of block scoping?;;try...catch blocks. <br>JS binds a caught exception to a variable that is scoped just to the catch block.;
+Define: the receiver of a function.;;1 The receiver is determined by the call expression.2 The receiver becomes the value of `this`.<br>obj.sup(): looks up the sup property of obj and calls with receiver obj.;
+How does a constructor call differ from function and method calls?;;The receiver is an empty object<br>This object is implicitly returned.;
+What is a higher order function?;;A function that takes other functions as arguments or returns functions.<br>Lots of good examples with Arrays: map, filter, etc.;
+Define arity;;The number of arguments a function expects.<br>Variable-arity functions = variadic functions;
+Arguments to reduce?;;reduce: callback, initialValue<br>callback: previousValue, currentValue, Index, array<br>If initialValue is left out, first value of array is used instead, and currentValue = 2nd element.<br>;
+Test to see if every array element returns true.;;every(callback [, thisObject ])<br>callback takes: element, index, array<br /><br>Not invoked for deleted indexes or indexes never assigned values<br>Returns true for empty arrays;
+in vs hasOwnProperty;;Both check to see if an object has a property.in (keyword): checks inherited properties<br>hasOwnProperty (method): doesn't check inherited properties;
+test vs search;;test is a RegExp method - returns true or false<br>search is a String method - returns index or -1;
+"Using String#replace and special replacement patterns, reverse the words in ""This string""";;"""this string"".replace(/(\w+)\s(\w+)/, ""$2, $1"")";
+What are the JavaScript primitive types?;;Number String Boolean Object Function Null Undefined;
+Copy an array.;;use slice() with no arguments.;
+What is event bubbling?;;A behavior of events in the DOM. <br>All events are passed up the DOM through parent nodes.<br>This is useful because instead of placing 20 individual listeners on various <a>'s throughout the page, you can just place one on a node higher up than those 20 elements and it will events from every <a>.;
+Cnstr.prototype === Object.getPrototypeOf(____);;new Cnstr();
+__proto__ vs prototype;;__proto__: unconventional way to grab prototype of an object<br>C.prototype: defines prototype for objects created by new C();
+Create an object that inherits from function User() {}, using Object.create;;var user = Object.create(User.prototype);
+Get the properties of an object.;;Returns array: Object.keys(obj)<br>Object.getOwnPropertyNames(obj)<br>Passes to function:;for (var p in obj) { ... }
+When does JavaScript pass by value, and when does it pass by reference?;;Primitives are passed by value<br>Objects (and arrays) are passed by reference.<br><br /><br>(Well, everything is a value, but for objects/arrays, that value is a reference.);
+Pass an array of args to function average();;average.apply(null, args);

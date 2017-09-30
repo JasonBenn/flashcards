@@ -1,17 +1,76 @@
-Bradfield: DATABASES
+DEEP LEARNING TODO:
 
+Word2Vec skip gram, continuous bag of words, GLoVE?
+Flatten()
+optim.SGD
+"asynchronous GPU copies", nn.DataParallel vs cuda(async=True), page-locked host memory: http://pytorch.org/docs/master/notes/cuda.html
+
+
+DATABASES TODO:
+
+What is BigTable? https://cloud.google.com/files/BigQueryTechnicalWP.pdf
+Spanner?
+ACID: A?
+ACID: C?
+ACID: I?
+ACID: D?
 What are the properties of popular databases?
-
 Things useful for interpreting query plans?
-
 Components of DB?
-
 Shared-nothing?
-
 Shard-per-core?
+Latency Numbers Every Programmer Should Know: https://gist.github.com/jboner/2841832
+Test with: http://computers-are-fast.github.io/
 
-Dynamo?
 
-Cassandra? Decentralized,
-
+DIST SYS TODO:
 Throughput vs latency as you distribute?
+
+isolation level: Snapshot?;
+isolation level: Repeatable read?;
+isolation level: Read committed?;
+isolation level: Serializable?;
+
+
+OOP-SOA TODO:
+This talk from Jan: https://www.youtube.com/watch?v=2rKEveL55TY
+
+
+PYTHON TODO:
+https://docs.python.org/2/library/functions.html#sum
+
+
+DJANGO TODO:
+
+Permissions systems in Python.
+
+https://github.com/minervaproject/picasso/pull/2124
+
+django.contrib.auth:
+- permission bools (analogous to capabilities)
+- groups: a label and bag of permissions for users
+- "pluggable backend system"
+
+components:
+- django.contrib.auth: core of framework, including some default models (user?)
+- django.contrib.contenttypes: "allows permissions to be associated to models"
+    - Allows polymorphic relationships. On the object that can be associated with anything, do:
+  content_type = models.ForeignKey(ContentType)
+  object_id = models.PositiveIntegerField()
+  content_object = generic.GenericForeignKey()
+        - And on the things with comments, do comments = generic.GenericRelation('Comment')
+    - works because the package automatically creates an instance of ContentType for each model you have, and provides methods for fetching the actual model given a ContentType instance. This way, with a FK to ContentType, an instance can relate
+
+BIG IDEAS:
+Model field reference:
+Field attribute reference
+Model _meta API
+Related objects reference
+Model class reference
+Model Meta options
+Model instance reference
+QuerySet API reference
+Lookup API reference
+Query Expressions
+Conditional Expressions
+Database Functions

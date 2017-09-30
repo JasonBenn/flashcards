@@ -1,0 +1,3 @@
+How do you decide which way control should flow between two services?;;Consider which way control flows and which way data flows. Ideally, one won't have to know anything about the other. If one service's only responsibility is to define and enforce a contract, then it can have any number of different types of clients. And all of the calling/receiving logic can live at the other side, where it can change together.;
+
+How do big companies like Amazon and Uber deploy services in coordination?;;They avoid it. Versioned APIs, multiple versions of services deployed simultaneously, gradual shifts from one version to the other tolerated. Unlocks A/B testing, gradual rolling deploys, easier rollbacks.;

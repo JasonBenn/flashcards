@@ -1,0 +1,20 @@
+Describe the Word2Vec skip gram architecture;;Train simple NN with 1 hidden layer to predict the middle word in a phrase.;
+
+How is an autoencoders useful? They just pass inputs through a hidden layer and output the same thing, right?;;After training, you can use the hidden layer - it'll have learned useful features.;
+
+Autoencoder vs variational autoencoder?;;VAE: loss function includes KL divergence between input encoding and Gaussian uniform vector;
+
+Stochastic gradient descent vs gradient descent?;;Gradient descent: compute gradient for entire set.<br>Stochastic: approximate that gradient by selecting a random batch.;
+
+Cosine distance vs Euclidean distance?;;Cosine = angle between vectors, Euclidean = distance. For high dim space (100s+), distance is meaningless because everything is "on the edge" of that space.;
+
+Find the most similar vector?;;;sklearn.neighbors.NearestNeighbors
+
+sklearn.neighbors: NearestNeighbors vs LSHForest?;;Exact NN (n^2) vs approximate NN (nlog(n)) - locality sensitive hashing forests.;
+
+Convert bcolz array into numpy array?;;Careful you have enough memory tho.;bcolz.open('thing.bc')[:]
+
+Style target for style transfer?;;Gram matrix of image channels. Somehow removes location info, preserves texture info;
+
+Dropout?;;Regularization technique. Analogous to training a large ensemble of small networks.
+

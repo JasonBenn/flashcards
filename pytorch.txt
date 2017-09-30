@@ -1,0 +1,7 @@
+When does an output require gradient?;;When 1 or more of its inputs require gradient.;
+Variable: requires_grad?;;Default False (?) except for pretrained models. Turn off for all variables to disable computing gradients in a subtree of your graph.;
+Variable: volatile?;;Similar to require_grad, but only a single volatile var is needed to turn off gradients/intermediate states for all connected operations.;
+Check if a model will store intermediate state, compute gradients?;;;a.required_grad<br>a.grad_fn
+What data structure does autograd use to build up state during forwards and backwards passes?;;Forward pass: every Variable with a grad_fn is a leaf in a DAG, they're joined until we get to the root which is the output. Backwards pass happens in reverse. Graph built at every iteration, enabling us to change shape of graph dynamically.;
+How do you determine if two tensors are broadcastable?;;Align the trailing axes. All dims must be a) the same, b) 1, or c) not exist.;
+Initialize a tensor on a GPU?;;;torch.cuda.Tensor()
