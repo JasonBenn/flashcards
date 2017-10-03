@@ -23,3 +23,62 @@ Read all of the functions implemented by module `url`?;;;dir(url)
 How many layers of nesting does a decorator that takes arguments require?;;3;def outer_layer(takes_arguments):<br>....def second_layer(old_function):<br>........def inner_layer(*args, **kwds):<br>............new_function_work<br>........return inner_layer<br>....return second_layer
 
 / vs //?;;Float division (py3 only) vs integer floor division.;
+
+np: Create a new array of 2*2 integers?;;;np.zeros([2,2], int)
+
+np: Create a 3x3 matrix with ones on the diagonal and zeros elsewhere.;;;np.identity(3)
+
+np: Create a new array of 2*5 uints, filled with 6.;;;np.full((2, 5), 6, dtype=np.uint)
+
+np: What are the 4 _like methods, and what do they do?;;Copy shape and datatype. zeros, ones, full, empty;
+
+np: create a 3x5 matrix of random data;;;np.random.random((3, 5))
+
+np: Create an array of 2, 4, 6, 8, ..., 100.;;;np.arange(2, 101, 2)
+
+np: Create a 1-D array of 50 linearly (or logarithmically) spaced elements between 3. and 10., inclusive.;;;np.linspace(3., 10, 50)<br>np.logspace
+
+np: zero out the bottom triangle of an array?;;;np.tril(X, -1)  # -1 chooses the diagonal
+
+np: reshape the second dimension to be 75, let the first dimension be inferred?;;;x.reshape((-1, 150))
+
+np: flatten a 2D array by iterating through in column order?; [[1, 2, 3], [4, 5, 6]] => [1 4 2 5 3 6];Use "Fortran" order. Default is "C", for C-style order (row-major). Fortran used column-major ordering.;np.asarray([np.arange(1, 4), np.arange(4, 7)]).flatten(order='F')
+
+np: get the 10th element in a matrix?;;;x.flat[10]
+
+np: get transpose of matrix?;;;x.T
+
+np: expand dimensionality of matrix? Make each element of a 3, 4 array sit inside its own array.;;Shape will go from (3, 4) to (3, 4, 1);np.expand_dims(axis=2)
+
+np: remove single-dimensional axes?;;;ndarray.squeeze()
+
+np: Let x be an array <br/>[[ 1 2 3]<br/>[ 4 5 6].<br/><br/>and y be an array <br/>[[ 7 8 9]<br/>[10 11 12]].<br/>Concatenate x and y so that a new array looks like <br/>[[1, 2, 3, 7, 8, 9], <br/>[4,5, 6, 10, 11, 12]].;;;np.concatenate((a1, a2), axis=1)
+
+np: Let x be an array [1, 2, 3, ..., 9]. Split x into 3 arrays, each of which has 4, 2, and 3 elements in the original order.;;;np.split(x, [4, 6, 9])
+
+np: separate or join arrays across various dimensions?;;vsplit (row-wise), hsplit (column-wise), dsplit (depth-wise)<br>vstack, hstack, dstack<br>split, concatenate, stack;
+
+np: concatenate vs stack?;;Concatenate adds matrices together along existing axes, stack inserts new ones.;
+
+np: Compare two arrays elementwise?;;;np.allclose(a, b)
+
+np: Let x be an array [0, 1, 2]. Convert it to <br/>[[0, 1, 2, 0, 1, 2],<br/>[0, 1, 2, 0, 1, 2]].;;A, reps=times to repeat array along each axis;np.tile(x, [2, 2])
+
+np: Let x be an array [0, 1, 2]. Convert it to <br/>[0, 0, 1.1, 1, 2, 2].;;;np.repeat([0, 1, 2], 2)
+
+np: Let x be an array [2, 2, 1, 5, 4, 5, 1, 2, 3]. Get two arrays of unique elements and their counts.;;return_index=True: indices of input that give first unique val<br>return_inverse=False: return indices that you can use to reconstruct original<br>return_counts=False: return counts<br>axis=None: if None, flatten first, otherwise only get unique per axis.;np.unique(x, return_counts=True)
+
+np: Let x be an array <br/>[[ 1 2]<br/>[ 3 4].<br/>Rotate x 90 degrees counter-clockwise.;;m, # times to rotate clockwise, rotate through plane defined by these axes=(0, 1);np.rot90(x, -1)
+
+np: Let x be an array <br/>[[ 1 2 3 4]<br/>[ 5 6 7 8].<br/>Shift elements one step to right along the second axis.;;a, shift, axis;np.roll(x, 0, axis=1)
+
+np: Count the lowest index of "l" in x, element-wise.;;All sorts of string ops live in np.char.;np.char.find(x, 'l')
+
+np: keyword search on docstrings?;;;np.lookfor(keyword)
+
+np: customize how NP objects are displayed?;;precision=8: digits for floating points<br>threshold=1000: points at which np summarizes<br>suppress=False: show small floats?;np.set_printoptions
+
+Show binary representation of decimal number?;;digit, width;np.binary_repr(12)<br>np.base_rep(12, 2)
+
+np: what happens when you matmul a vector and 2x2 matrix? Isn't 2x1 * 2x2 multiplication impossible?;@;It promotes the vector to a matrix by PREPENDING a 1 to the dimensions;
+
