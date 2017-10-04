@@ -82,3 +82,26 @@ Show binary representation of decimal number?;;digit, width;np.binary_repr(12)<b
 
 np: what happens when you matmul a vector and 2x2 matrix? Isn't 2x1 * 2x2 multiplication impossible?;@;It promotes the vector to a matrix by PREPENDING a 1 to the dimensions;
 
+enumerate through an array and its indices?;;;for index, value in np.ndenumerate(x):
+
+When you index by an array or a matrix, what happens?;;Each element of matrix is interpreted as a coordinate (for that dimension) and mapped to corresponding value.;
+
+What are the three parts of an index for a matrix?;;slice start, slice end, stride;
+
+What happens when you index one dimension with tensors and not the others?;;The others are broadcast to match dimensions, if possible, then mapped.;
+
+Indexing: select in full from unspecified dimensions?;;Use the Ellipsis object literal;y[..., :2, :2]
+
+How are tuples and indexes treated differently when slicing?;;Arrays are mapped to entire dimensions of values, tuples are coordinates;y[(1, 1, 2)] => scalar, y[[1, 1, 2]] => the matrix at depth 1 twice, then the matrix at depth 2
+
+Render a matrix as an image?;;;import matplotlib.pyplot as plt<br>plt.imshow(X, cmap='bone')<br>plt.show()
+
+imshow: what dimensions does it accept?;;MxN: color mappable<br>MxNx3: RGB<br>MxNx4: RGBA;
+
+What types of colormaps are there?;;Sequential: lightness increases<br>Diverging: neutral at 0<br>Qualitative: pretty<br>Miscellaneous: rainbow, terrain, etc;
+
+get a copy of a slice?;;;B = A.copy()
+
+Select matrix values above 10?;;;B = A > 10
+
+matplotlib.pyplot.scatter: args?;;x, y: input data<br>s: size or sequence of sizes<br>c: color or sequence of colors (RGB);
