@@ -16,5 +16,13 @@ Convert bcolz array into numpy array?;;Careful you have enough memory tho.;bcolz
 
 Style target for style transfer?;;Gram matrix of image channels. Somehow removes location info, preserves texture info;
 
-Dropout?;;Regularization technique. Analogous to training a large ensemble of small networks.
+Dropout?;;Regularization technique. Analogous to training a large ensemble of small networks.;
+
+Why do word embeddings work by counting context words?;;Because the meaning of "club" in "a ___ walked into a club" depends on if ___ is "DJ" or "baby seal".;
+
+Attention Is All You Need?;;seq2seq. RNNs/CNNs are unparallelizable. Transformer iteratively generates embeddings with multi-headed attention. 2x faster to train, beat SOTA by 2 BLEU;Jun 17, Ashish Vaswani
+
+Bilinear interpolation?;;For a point within a field, take the linear average in two dimensions. Compare to nearest-neighbor interpolation.<img src="bilinear-interpolation.png">;
+
+Describe this convolution?<img src="conv-stride.png">;;3x3 filter, stride 2;
 
