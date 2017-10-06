@@ -25,3 +25,7 @@ Add dimension to end of array?;;;torch.unsqueeze(X, -1)
 Split a tensor into 5 pieces along a dimension?;;tensor, chunks, dim;torch.chunk(X, 5, 2)
 
 Torch equivalent of boolean indexing?;;;mask = X.gt(5)<br>X.masked_select(mask)
+
+Specify optimization params on a per-layer basis?;;;
+
+Clear optimizer state?;;Clears gradients from all optimized variables.;zero_grad()

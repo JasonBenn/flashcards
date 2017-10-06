@@ -76,3 +76,20 @@ Hermitian matrix and conjugate transpose?;;Like a symmetric matrix for complex n
 
 Cholesky decomposition?;;Only for hermitian, positive definite m's.<br>;
 
+When do matrices have eigendecompositions?;;When they're diagonalizable (similar to a diagonal matrix);
+
+Jacobian?;;For functions whose m inputs and n outputs are vectors: a matrix nxm of partial derivatives.;
+
+Hessian?;;A matrix of second derivatives/a Jacobian of the gradient.;
+
+Condition number?;;If max singular value is big multiple of min singular value (eigenvalues for normal matrices), the matrix is "poorly conditioned". Poorly conditioned Hessians are bad news for gradient descent.;
+
+What can the eigendecomposition of a Hessian tell us?;;The directions and scale of the second derivatives of a function.<br>Positive/negative definite: we're at local minima/maxima.<br>Mixed sign eigenvalues: saddle points.<br>Any zeros: inconclusive.;If our fn has a poorly conditioned Hessian, that tells us that one dimension is changing quickly, and that we should chase in that direction instead of following the steepest first derivative. Imagine standing high on a canyon walls going down a mountain: 1st order with too high a learning rate could zig-zag you across the canyon, 2nd order takes you down the mountain directly.
+
+Newton's method?;;Second-order optimization technique. Uses info from Hessian to guide descent. Can jump right to solution if problem is quadratic. If only approximating quadratic, iteratively use it to jump to solution much faster than grad descent. Attracts to saddle points, unfortunately;
+
+First-order optimization vs second-order optimization?;;Does the algo use just the gradient, or does it also use the Hessian?;
+
+Convex optimization?;;Function for which the Hessian is positive semidefinite everywhere. Great for second-order optimization.;
+
+MLE?;;Maximum likelihood estimation.<br>Estimate the distribution given a sample (i.e., estimate μ, σ² for all dims)<br>;
