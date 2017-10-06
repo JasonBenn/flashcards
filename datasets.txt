@@ -1,0 +1,1 @@
+Push dataset: from Unsupervised Learning for Physical Interaction through Video Prediction. 59k videos of robots pushing seen and unseen objects. Good for predicting causal future.
