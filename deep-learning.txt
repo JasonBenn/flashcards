@@ -26,7 +26,7 @@ Describe this convolution?<img src="conv-stride.png">;;3x3 filter, stride 2;
 
 How are resnets like ensembles?;;It's in the title: "Residual networks are exponential ensembles of relatively shallow networks", Andreas Veit, May 16;
 
-Momentum vs Nesterov momentum?;;Evaluate gradient at current position, or evalute gradient at end of momentum step? Nesterov consistently a bit better.
+Momentum vs Nesterov momentum?;;Evaluate gradient at current position, or evalute gradient at end of momentum step? Nesterov consistently a bit better.;
 
 L-BFGS?;;Approximates Newton's method by watching gradients over time to form an approximate Hessian.;
 
@@ -38,5 +38,6 @@ Why are autoencoders a Bad Idea for unsupervised learning?;;Because they learn t
 
 Attention Is All You Need?;;seq2seq. RNNs/CNNs are unparallelizable. Transformer iteratively generates embeddings with multi-headed attention. 2x faster to train, beat SOTA by 2 BLEU;Jun 17, Ashish Vaswani
 
-Artistic style transfer for videos?;;style transfer each frame + a penalty term for diverging from the previous frame + tricks to make it look good:<br>1. penalize deviations along "optical flow"<br>2. don't penalize disoccluded spots<br>3. don't let artifacts at the frame edges form;
+Artistic style transfer for videos?;;style transfer each frame + a penalty term for diverging from the previous frame + tricks to make it look good:<br>1. penalize deviations along "optical flow"<br>2. don't penalize disoccluded spots<br>3. don't let artifacts at the frame edges form;Apr '16
 
+Pixel RNNs?;;Creates good distributions of images by using 2D RNNs on pixels, with RNN skip connections.; Jan '16
