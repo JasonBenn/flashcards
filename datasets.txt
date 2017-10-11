@@ -1,1 +1,3 @@
 Push dataset: from Unsupervised Learning for Physical Interaction through Video Prediction. 59k videos of robots pushing seen and unseen objects. Good for predicting causal future.
+
+bAbI: AI-Complete Question Answering 10k synthetic dataset. Each task is a story, query, answer. Stories are ordered in time. Very dumb. Used for memory networks.
