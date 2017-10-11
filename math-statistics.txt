@@ -93,3 +93,18 @@ First-order optimization vs second-order optimization?;;Does the algo use just t
 Convex optimization?;;Function for which the Hessian is positive semidefinite everywhere. Great for second-order optimization.;
 
 MLE?;;Maximum likelihood estimation.<br>Estimate the distribution given a sample (i.e., estimate μ, σ² for all dims)<br>;
+
+Calculus: product rule? fg;;;f'g + fg'
+
+Calculus: quotient rule? f/g;;;(f'g - fg')/g²
+
+Calculus: reciprocal rule? 1/f;;;-f'/f²
+
+
+
+
+
+
+
+
+
