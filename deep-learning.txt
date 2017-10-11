@@ -20,12 +20,23 @@ Dropout?;;Regularization technique. Analogous to training a large ensemble of sm
 
 Why do word embeddings work by counting context words?;;Because the meaning of "club" in "a ___ walked into a club" depends on if ___ is "DJ" or "baby seal".;
 
-Attention Is All You Need?;;seq2seq. RNNs/CNNs are unparallelizable. Transformer iteratively generates embeddings with multi-headed attention. 2x faster to train, beat SOTA by 2 BLEU;Jun 17, Ashish Vaswani
-
 Bilinear interpolation?;;For a point within a field, take the linear average in two dimensions. Compare to nearest-neighbor interpolation.<img src="bilinear-interpolation.png">;
 
 Describe this convolution?<img src="conv-stride.png">;;3x3 filter, stride 2;
 
 How are resnets like ensembles?;;It's in the title: "Residual networks are exponential ensembles of relatively shallow networks", Andreas Veit, May 16;
 
+Momentum vs Nesterov momentum?;;Evaluate gradient at current position, or evalute gradient at end of momentum step? Nesterov consistently a bit better.
+
+L-BFGS?;;Approximates Newton's method by watching gradients over time to form an approximate Hessian.;
+
+Adagrad, RMSProp?;;Optimization algorithms that maintain different LRs for each param based on magnitudes of their gradients.;
+
+Adam?;;RMSProp with momentum.<br>Often worth trying SGD + Nesterov momentum too, though.;
+
 Why are autoencoders a Bad Idea for unsupervised learning?;;Because they learn to predict the present.<br>Real unsupervised learning happens when you use causal prediction as the supervisory signal (predict next word, next frame) (LSTMs)<br>See: language modeling, autoregressive image generators (PixelRNN) that produce sharper images than non-autoregressive VAEs;
+
+Attention Is All You Need?;;seq2seq. RNNs/CNNs are unparallelizable. Transformer iteratively generates embeddings with multi-headed attention. 2x faster to train, beat SOTA by 2 BLEU;Jun 17, Ashish Vaswani
+
+Artistic style transfer for videos?;;style transfer each frame + a penalty term for diverging from the previous frame + tricks to make it look good:<br>1. penalize deviations along "optical flow"<br>2. don't penalize disoccluded spots<br>3. don't let artifacts at the frame edges form;
+
