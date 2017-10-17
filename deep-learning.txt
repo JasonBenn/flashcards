@@ -41,3 +41,12 @@ Attention Is All You Need?;;seq2seq. RNNs/CNNs are unparallelizable. Transformer
 Artistic style transfer for videos?;;style transfer each frame + a penalty term for diverging from the previous frame + tricks to make it look good:<br>1. penalize deviations along "optical flow"<br>2. don't penalize disoccluded spots<br>3. don't let artifacts at the frame edges form;Apr '16
 
 Pixel RNNs?;;Creates good distributions of images by using 2D RNNs on pixels, with RNN skip connections.; Jan '16
+
+Learning Hierarchical Features for Scene Labeling? Lecun, 2013;;Predict a class for every pixel at different levels of granularity (3-level Laplacian pyramid)<br>Smooth noisy predictions by identifying hierarchies of superpixel regions of similar color intensities, choose labels and regions that minimize surprisingness.<br>;
+
+Laplacian pyramid?;;Multiple scaled copies of an image. Each image is a difference image of one below, lowest-res is pixels. Useful for compression, image segmentation.<br>Compare to Gaussian pyramids: each level is blurred and downsampled.;
+
+Superpixels?;;Image segmentation<br>Hierarchical regions of similar color intensity. Follow natural contours of image.;
+
+Recursive Context Propagation Network?;;An image segmentation architecture w CNN+RNN.<br>RNN resolves confusion between "boat"/"building" using context from other class probabilities, e.g. the nearby segment labeled "water".;
+

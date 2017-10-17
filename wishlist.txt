@@ -28,8 +28,9 @@ Skim. 5: ML Basics 56
 
 Word2Vec skip gram, continuous bag of words, GLoVE?
 Flatten()
-optim.SGD
 "asynchronous GPU copies", nn.DataParallel vs cuda(async=True), page-locked host memory: http://pytorch.org/docs/master/notes/cuda.html
+Categorical cross-entropy vs binary cross-entropy?;;;
+KL divergence?;;;
 
 
 http://cs231n.github.io/optimization-1/#gradcompute:
