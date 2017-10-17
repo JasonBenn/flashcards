@@ -26,6 +26,14 @@ Split a tensor into 5 pieces along a dimension?;;tensor, chunks, dim;torch.chunk
 
 Torch equivalent of boolean indexing?;;;mask = X.gt(5)<br>X.masked_select(mask)
 
-Specify optimization params on a per-layer basis?;;;
+How should I use torch.optim?;;Instantiate an optimizer object to hold and update params based on gradients.<br>Takes a list or params or a list of dicts of params<br>Each optimizer algorithm takes different kwargs.;
+
+Specify optimization params on a per-layer basis?;;Pass a list of dicts to optimizer factory: 'params' is list of params, other kwargs are individual settings, like lr.;
 
 Clear optimizer state?;;Clears gradients from all optimized variables.;zero_grad()
+
+How does nn.Embedding work?;;Pass it a minibatch of examples (lists of indexes), they'll be mapped to their embeddings.<br>num_embeddings<br>embedding_dim;e = nn.Embedding(50000, 300)<br>minibatch = Variable(LongTensor([[0, 3, 1]]))<br>e(minibatch)
+
+Reshape a PyTorch tensor?;;-1 can be inferred from other dimensions.;tensor.view((-1, 1))
+
+nn.Linear?;;Linear transformation factory that learns weights and bias for you.;lin = Linear(36, 300, bias=True)<br>relu(lin(inputs))
