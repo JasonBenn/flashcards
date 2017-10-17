@@ -107,3 +107,11 @@ Select matrix values above 10?;;;B = A > 10
 matplotlib.pyplot.scatter: args?;;x, y: input data<br>s: size or sequence of sizes<br>c: color or sequence of colors (RGB);
 
 compute e^x of a tensor?;;;np.exp(x)
+
+Make a new virtualenv?;;;pyenv virtualenv 3.6.2 new-env
+
+List virtualenvs?;;;pyenv virtualenvs
+
+Automatically switch to a virtualenv?;;;pyenv activate new-env<br>cat 'new-env' >> .python-version
+
+Uninstall a virtualenv?;;;pyenv uninstall new-env
