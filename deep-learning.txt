@@ -50,3 +50,24 @@ Superpixels?;;Image segmentation<br>Hierarchical regions of similar color intens
 
 Recursive Context Propagation Network?;;An image segmentation architecture w CNN+RNN.<br>RNN resolves confusion between "boat"/"building" using context from other class probabilities, e.g. the nearby segment labeled "water".;
 
+How might you tune your performance metric if one type of mistake is more costly than another?;;Make the cost of certain mistakes higher than others.;
+
+How do you design a performance metric for a rare disease detection system with 99.999% negative examples?;;Instead of measuring error, measure precision (% of predictions that are correct) and recall (% of true events predicted).<br><img src="precision-recall.png">;
+
+If you're considering letting your system not make predictions if its below a certain confidence, what should you measure?;;Coverage - % of things it made a prediction for<br>Accuracy - % of good predictions. OR<br>Precision & recall.;
+
+If your training performance is bad, what should you try?;;Increase model's capacity<br>Tune your LR<br>Improve the quality of your data;
+
+If your test performance is bad, what should you try?;;Reduce the model size<br>Regularize<br>Estimate how much data you need.;
+
+If training error is low and test error is high, how can you brute force your model?;;Increase capacity and add data.;
+
+WGAN?;;Wasserstein GAN. Original GANs used JS divergence for loss, but this isn't defined everywhere.<br>WGANs use Earth Mover distance: continuous, but intractable. So approximate it with another NN.<br>Jan 2017.;
+
+
+
+
+
+
+
+
