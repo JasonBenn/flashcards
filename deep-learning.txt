@@ -64,10 +64,31 @@ If training error is low and test error is high, how can you brute force your mo
 
 WGAN?;;Wasserstein GAN. Original GANs used JS divergence for loss, but this isn't defined everywhere.<br>WGANs use Earth Mover distance: continuous, but intractable. So approximate it with another NN.<br>Jan 2017.;
 
+DCGAN?;;Deep conv GANs - generate realistic images.;
 
+DiscoGAN/CycleGAN?;;Cross-domain relations - handbags to shoes, horses to zebras. Different loss functions.;
 
+Dynamic Routing Between Capsules?;Hinton, Q4 '17;A capsule = a groups of conv filters that output a vector, compared to CNNs which output one value for feature detector. Capsule length represents likelihood of that part existing in input.<br>Margin loss: length of final capsules compared to one-hot encoded input, reconstructive loss: decode vector into image and compare to input (encourages capsules to encode meaningful features)<br>SOTA MNIST, 10.2% on CIFAR10<br>Uses attention-like "routing by agreement" idea to route low-level capsules to high-level capsules whose activations point in similar direction. Replaces pooling, where you lose tons of info;
 
+Polygon RNN?;;Predict polygons from clicks, 5-7x speedup w 80% agreement;
 
+SynthMed?;;Hyperrealistic synthesized medical dataset. Segmented retinal images from DRIVE database.;
 
+medGAN?;;Synthetic EHRs. Generally indistinguishable except for outliers (prostate cancer (male) + menopausal disorder in same record - could be weeded out with domain-specific rules). Great for avoiding privacy concerns.;
+Training object class detectors with click supervision?;;Weakly supervised object localization: you click middle, it draws bbox. Big speedup;
 
+Cut/Paste/Learn: Synthesis for Instance Detection;;Put real object instances on fake bgs, train. 90% synthetic data outperforms models trained on 100% real data!;
 
+RGAN?;;Recurrent GAN, generates time series data w labels (trained early warning system on EHRs from ICUs). Models could train on 100% synthetic data, still generalize well (kinda like ImageNet), no privacy concerns, almost the same performance.;
+
+Knowledge distillation?;;Use an ensemble of models' predictions to train a single model - faster inference, obfuscates training data used.;
+
+Active learning?;;Decide which images to label next;
+
+Online learning?;;Continually train model with new examples;
+
+Weak supervision?;;Use clues.;
+
+Dual Generative Adversarial Networks?;;Generate synthetic segmentation masks, then another GAN converts to images. 1% diff in F1 score, awesome. Sidesteps privacy concerns.;
+
+U-Net?;;Biomedical image segmentation that's fast and requires <30 examples. U-shaped architecture max-pools then deconvs. Use lots of biomedical-specific data aug (warping, fuzzy membranes). Foreground/background class.;
