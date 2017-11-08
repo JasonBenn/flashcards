@@ -115,3 +115,5 @@ List virtualenvs?;;;pyenv virtualenvs
 Automatically switch to a virtualenv?;;;pyenv activate new-env<br>cat 'new-env' >> .python-version
 
 Uninstall a virtualenv?;;;pyenv uninstall new-env
+
+Difference between list and collections.deque (double-ended queue)?;;lists are arrays (O(1) for random access and approx O(1) for appending, O(N) for prepending)<br>deques are doubly-linked lists (O(1) push and pop from both ends).<br>deque also has maxlen, which shifts items off the front when a push would exceed it;
