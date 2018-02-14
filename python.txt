@@ -86,7 +86,7 @@ enumerate through an array and its indices?;;;for index, value in np.ndenumerate
 
 When you index by an array or a matrix, what happens?;;Each element of matrix is interpreted as a coordinate (for that dimension) and mapped to corresponding value.;
 
-What are the three parts of an index for a matrix?;;slice start, slice end, stride;
+What are the three parts of an index for a numpy matrix?;;slice start, slice end, stride;
 
 What happens when you index one dimension with tensors and not the others?;;The others are broadcast to match dimensions, if possible, then mapped.;
 
@@ -117,3 +117,5 @@ Automatically switch to a virtualenv?;;;pyenv activate new-env<br>cat 'new-env' 
 Uninstall a virtualenv?;;;pyenv uninstall new-env
 
 Difference between list and collections.deque (double-ended queue)?;;lists are arrays (O(1) for random access and approx O(1) for appending, O(N) for prepending)<br>deques are doubly-linked lists (O(1) push and pop from both ends).<br>deque also has maxlen, which shifts items off the front when a push would exceed it;
+
+What's the problem with mutable default arguments?;def uh_oh(arg={}):<br>    pass;They're instantiated once, not every time you invoke the function;

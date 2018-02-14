@@ -32,7 +32,7 @@ L-BFGS?;;Approximates Newton's method by watching gradients over time to form an
 
 Adagrad, RMSProp?;;Optimization algorithms that maintain different LRs for each param based on magnitudes of their gradients.;
 
-Adam?;;RMSProp with momentum.<br>Often worth trying SGD + Nesterov momentum too, though.;
+Adam? Kingma, Q4 2014;;RMSProp with momentum.<br>Often worth trying SGD + Nesterov momentum too, though.;
 
 Why are autoencoders a Bad Idea for unsupervised learning?;;Because they learn to predict the present.<br>Real unsupervised learning happens when you use causal prediction as the supervisory signal (predict next word, next frame) (LSTMs)<br>See: language modeling, autoregressive image generators (PixelRNN) that produce sharper images than non-autoregressive VAEs;
 

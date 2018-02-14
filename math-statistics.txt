@@ -38,9 +38,7 @@ Why is it convenient and fast to use the square L2 norm?;;Squared L2 can be comp
 
 Frobenius norm?;;For taking size of matrices. Analogous to vector L2 norm: you square everything, sum it, then root it.;
 
-Compute cross-entropy/log loss?;;-Σ yᵢ log(ŷᵢ);
-
-Compute the derivate of f at a?;;<img src="derivative.svg">;
+Compute cross-entropy/log loss?;;-Σ yᵢ log(ŷᵢ)<br>Sum of the labels times log of predictions.;
 
 How should you imagine an inverse matrix?;;A matrix is a linear transformation into a weird coordinate system: its inverse is playing that backwards (so you're left with the identity: a set of basis vectors!);
 
@@ -54,7 +52,7 @@ How to think of eigenvectors?;;The vectors that stay on their own span during a 
 
 Singular matrix?;;Square, linearly dependent columns (det = 0). Singular because it's the only kind of matrix without an inverse!;
 
-Eigenvector _x and eigenvalue x?;;X @ _x only alters scale of eigenvec (by eigenvalue)<br>Helpful because they tell us how X scales space in each dimension.;
+How should I think about an eigenvector's (_x) and eigenvalue's (x) effect on a matrix?;;X @ _x alters the scale of the eigenvector (by the eigenvalue)<br>Helpful because they tell us how X scales space in each dimension.;
 
 Eigendecomposition?;;Vdiag(λ)V⁻¹<br>V: eigenvectors, λ: diagonal of eigenvalues;
 
