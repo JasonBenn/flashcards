@@ -5,29 +5,6 @@ MATH/STATISTICS TODO:
 Matrix similarity?;;Change of basis could result in diagonal matrix;
 Diagonalizable matrix?;;A matrix similar to a diagonal matrix (so... it's vectors are orthogonal?);
 
-
-DEEP LEARNING TODO:
-
-3. Probability & Info Theory: 23
-Skim. 5: ML Basics 56
-6. Deep Feedforward Nets. 54
-7. Regularization. 42
-8. Optimization. 42
-9. Conv Nets. 38
-10. RNNs. 42
-11. Practical. 19
-12. Applications. 34
-13. Linear Factor Models. 10
-14. Autoencoders. 24
-15. Representation. 27
-16. Structured probabilistic models. 26
-17. Monte Carlo methods. 10
-18. Partition function. 17
-19. Approximate inference. 19
-20. Deep generative models. 65
-
-
-
 Word2Vec skip gram, continuous bag of words, GLoVE?
 Flatten()
 "asynchronous GPU copies", nn.DataParallel vs cuda(async=True), page-locked host memory: http://pytorch.org/docs/master/notes/cuda.html
@@ -40,7 +17,6 @@ Numerical gradient vs analytical gradient?
 SGD vs minibatch gradient descent?
 How do you figure out if your hyperparameter choice is a good one?;;Cross-validation.;
 np: multi_iter?;;Element's index in the iterator; https://docs.scipy.org/doc/numpy-1.12.0/reference/arrays.nditer.html
-
 
 
 DATABASES TODO:
@@ -72,24 +48,6 @@ isolation level: Serializable?;
 OOP-SOA TODO:
 This talk from Jan: https://www.youtube.com/watch?v=2rKEveL55TY
 
-
-PYTHON TODO:
-https://docs.python.org/2/library/functions.html#sum
-
-
-DJANGO TODO:
-
-Permissions systems in Python.
-
-https://github.com/minervaproject/picasso/pull/2124
-
-django.contrib.auth:
-- permission bools (analogous to capabilities)
-- groups: a label and bag of permissions for users
-- "pluggable backend system"
-
-components:
-- django.contrib.auth: core of framework, including some default models (user?)
 - django.contrib.contenttypes: "allows permissions to be associated to models"
     - Allows polymorphic relationships. On the object that can be associated with anything, do:
   content_type = models.ForeignKey(ContentType)
@@ -97,17 +55,3 @@ components:
   content_object = generic.GenericForeignKey()
         - And on the things with comments, do comments = generic.GenericRelation('Comment')
     - works because the package automatically creates an instance of ContentType for each model you have, and provides methods for fetching the actual model given a ContentType instance. This way, with a FK to ContentType, an instance can relate
-
-BIG IDEAS:
-Model field reference:
-Field attribute reference
-Model _meta API
-Related objects reference
-Model class reference
-Model Meta options
-Model instance reference
-QuerySet API reference
-Lookup API reference
-Query Expressions
-Conditional Expressions
-Database Functions

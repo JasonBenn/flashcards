@@ -74,12 +74,13 @@ Polygon RNN?;;Predict polygons from clicks, 5-7x speedup w 80% agreement;
 
 SynthMed?;;Hyperrealistic synthesized medical dataset. Segmented retinal images from DRIVE database.;
 
-medGAN?;;Synthetic EHRs. Generally indistinguishable except for outliers (prostate cancer (male) + menopausal disorder in same record - could be weeded out with domain-specific rules). Great for avoiding privacy concerns.;
+Synthetic EHRs: name, pros and cons?;;medGAN. Generally indistinguishable except for outliers (prostate cancer (male) + menopausal disorder in same record - could be weeded out with domain-specific rules). Great for avoiding privacy concerns.;
+
 Training object class detectors with click supervision?;;Weakly supervised object localization: you click middle, it draws bbox. Big speedup;
 
 Cut/Paste/Learn: Synthesis for Instance Detection;;Put real object instances on fake bgs, train. 90% synthetic data outperforms models trained on 100% real data!;
 
-RGAN?;;Recurrent GAN, generates time series data w labels (trained early warning system on EHRs from ICUs). Models could train on 100% synthetic data, still generalize well (kinda like ImageNet), no privacy concerns, almost the same performance.;
+Generate 100% synthetic medical time series data? Pros, performance comparison?;;RGAN (Recurrent GAN), generates time series data w labels (trained early warning system on EHRs from ICUs). Models could train on 100% synthetic data, still generalize well (kinda like ImageNet), no privacy concerns, almost the same performance.;
 
 Knowledge distillation?;;Use an ensemble of models' predictions to train a single model - faster inference, obfuscates training data used.;
 
