@@ -1,3 +1,11 @@
+What's the value of $0?;;The script's name. Can be supplied with `exec -a`.;
+
+What does exec `command` do?;;Replaces the current process with `command`<br>-l makes it a login shell. -c executes command with empty env.;
+
+What does "bash" stand for?;;"bourne again" shell.;
+
+Bash vs shell?;;`/bin/bash` has more features than `/bin/sh`: [[, <<<here strings, brace expansion.;
+
 Return value of bash commands?;;echo $?<br>0 (truthy) or any other number (error status code);
 
 Unix process model: 3 inputs;;ARGV [strg]<br>STDIN <Rstr> (like a cable)<br>ENV { } (string keys string values);
