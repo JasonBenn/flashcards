@@ -42,3 +42,5 @@ Delete entries?;;;DELETE FROM ___<br>WHERE ...
 what's the problem?;SELECT TenantName FROM Tenants<br>GROUP BY TenantID;You can't GROUP BY a field you haven't selected.;
 When are relations created?;;After the SELECT and the WHERE. This is why you can filter a table with WHERE without selecting that field.;
 HAVING vs WHERE;;Filters an existing relation after it's been created and GROUP BY'd<br>WHERE filters a table before it's created.;
+
+EXPLAIN ANALYZE vs EXPLAIN?;;EXPLAIN ANALYZE will also execute the query and will be much more accurate.;

@@ -1,3 +1,5 @@
+Type reference a symbol before it's defined (like in a class definition)?;;Wrap the symbol in a string, it'll be eval'd later.<br>"Forward reference";
+
 Display the differences between an environment and Django's default settings;;;manage.py diffsettings
 
 Roll back a migration?;;;server/manage.py migrate seminar 0073
@@ -121,8 +123,13 @@ Difference between list and collections.deque (double-ended queue)?;;lists are a
 What's the problem with mutable default arguments?;def uh_oh(arg={}):<br>    pass;They're instantiated once, not every time you invoke the function;
 
 Constrain memory by Python;;;resource.setrlimit()
+
 Why is Django delete() taking too much mem?;;It does SELECT, loads in Python, then sends signals around while deleting. Use _raw_delete to do it in SQL.;
+
 Recover OOM EB instance?;;Make sure no connection to DB, reboot in EC2, deploy.;
+
 Physical location of postgres record?;;;ctid
+
 psql pretty print;;;\x auto
+
 Postgres activity table?;;;pg_stat_activity

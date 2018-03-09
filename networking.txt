@@ -1,87 +1,91 @@
-PGP?;Email. Symmetric keys, public keys, signatures. P2P public keys instead of CA!
+PGP?;;Email. Symmetric keys, public keys, signatures. P2P public keys instead of CA!;
 
-What are TLS, WPA, IPSec used for?;Transport layer, wifi, IP.
+What are TLS, WPA, IPSec used for?;;Transport layer, wifi, IP.;
 
-Signatures vs MACs, implementation?;MAC is a hash that uses symmetric key, signature is hash that uses public key.
+Signatures vs MACs, implementation?;;MAC is a hash that uses symmetric key, signature is hash that uses public key.;
 
-Signatures vs MACs, tradeoffs?;Don't need to distribute secret key.<br/>Verifiable by anyone, so adds non-repudiation.<br/>MAC several orders of magnitude faster.
+Signatures vs MACs, tradeoffs?;;Don't need to distribute secret key.<br/>Verifiable by anyone, so adds non-repudiation.<br/>MAC several orders of magnitude faster.;
 
-3 security goals for hash/MAC/signature?;Integrity (unmodified?)<br/>Authentication (from sender?)<br/>Non-repudiation (forwarded msgs still authenticated?)
+3 security goals for hash/MAC/signature?;;Integrity (unmodified?)<br/>Authentication (from sender?)<br/>Non-repudiation (forwarded msgs still authenticated?);
 
-Digital signature implementation?;Decrypt hash with private key. Recipient encrypts with public key. Result = msg hash!
+Digital signature implementation?;;Decrypt hash with private key. Recipient encrypts with public key. Result = msg hash!;
 
-Certificate authority?;Digitally sign certificates with their public keys.<br/>Everyone agrees they're trustworthy and good at issuing certs.
+Certificate authority?;;Digitally sign certificates with their public keys.<br/>Everyone agrees they're trustworthy and good at issuing certs.;
 
-Certificate?;Associates public key with owner, signed by CA.
+Certificate?;;Associates public key with owner, signed by CA.;
 
-How to beat a playback attack?;Use a nonce (will never be seen again) in new communications.
+How to beat a playback attack?;;Use a nonce (will never be seen again) in new communications.;
 
-Symmetric key vs public key systems?;Symmetric: identical private key.<br/>Public: one known to whole world, private key known only to one.
+Symmetric key vs public key systems?;;Symmetric: identical private key.<br/>Public: one known to whole world, private key known only to one.;
 
-Two kinds of symmetric encryption?;Stream ciphers, block ciphers
+Two kinds of symmetric encryption?;;Stream ciphers, block ciphers;
 
-How does a block cipher work?;Maps k bits in source to k random bits from mapping table. Typically 64+ bits, and table is simulated by function bc memory.
+How does a block cipher work?;;Maps k bits in source to k random bits from mapping table. Typically 64+ bits, and table is simulated by function bc memory.;
 
-Prevent attacker from breaking block cipher by recognizing "HTTP/1.1" in two messages?;XOR each block w random bits before encrypting, send those bits in plaint text.<br/>First message contains the plaintext pattern: the "Initialization Vector"
+Prevent attacker from breaking block cipher by recognizing "HTTP/1.1" in two messages?;;XOR each block w random bits before encrypting, send those bits in plaint text.<br/>First message contains the plaintext pattern: the "Initialization Vector";
 
-How does public/private key encryption basically work?;To send a message to Bob: find his public key, encrypt w algorithm and key, only he can decrypt with his private key.
+How does public/private key encryption basically work?;;To send a message to Bob: find his public key, encrypt w algorithm and key, only he can decrypt with his private key.;
 
-Problems introduced by public/private key encryption?;1) chosen-plaintext attack?<br/>2) Unlike symmetric encryption, we don't know who sent msg.
+Problems introduced by public/private key encryption?;;1) chosen-plaintext attack?<br/>2) Unlike symmetric encryption, we don't know who sent msg.;
 
-RSA & AES?;canonical public key & symmetrical key crypto<br/>RSA is expensive: often used to communicate secret session key for cheaper AES
+RSA & AES?;;canonical public key & symmetrical key crypto<br/>RSA is expensive: often used to communicate secret session key for cheaper AES;
 
-Message integrity concerns?;actually came from sender, wasn't tampered with en route
+Message integrity concerns?;;actually came from sender, wasn't tampered with en route;
 
-5 properties of good cryptographic hash function?;FDISC<br/>Fast, Deterministic, Infeasible to get msg except by trying all msgs, Small changes make unrecognizable, Collisions unlikely<br/>MD5, SHA-1, SHA-3, BLAKE2
+5 properties of good cryptographic hash function?;;FDISC<br/>Fast, Deterministic, Infeasible to get msg except by trying all msgs, Small changes make unrecognizable, Collisions unlikely<br/>MD5, SHA-1, SHA-3, BLAKE2;
 
-How are block ciphers typically implemented?;As functions.<br/>Would be too expensive to store mapping table of i.e. 2^64 mappings, so use function to simulate, seeded by key.<br/>Example: AES-128/256
+How are block ciphers typically implemented?;;As functions.<br/>Would be too expensive to store mapping table of i.e. 2^64 mappings, so use function to simulate, seeded by key.<br/>Example: AES-128/256;
 
-What is an upper-tier ISP?;ISPs that provide access to end systems must also be interconnected. Examples: Level 3 Communications, AT&T, Sprint
+What is an upper-tier ISP?;;ISPs that provide access to end systems must also be interconnected. Examples: Level 3 Communications, AT&T, Sprint;
 
-What is the first packet switch in a wireless LAN called?;Access Point
+What is the first packet switch in a wireless LAN called?;;Access Point;
 
-What are the benefits of radio channels carrying signals in the electromagnetic spectrum?;They can penetrate walls and potentially travel long distances
+What are the benefits of radio channels carrying signals in the electromagnetic spectrum?;;They can penetrate walls and potentially travel long distances;
 
-What do Bluetooth, WiFi, and cellular networks have in common?;They all rely on radio waves (of various wavelengths)
+What do Bluetooth, WiFi, and cellular networks have in common?;;They all rely on radio waves (of various wavelengths);
 
-What is a queueing delay?;Most packet switches use store-and-forward transmission at their inbound links, necessitating temporary storage of packets. Queueing delay occurs when an outgoing link is already busy transmitting other packets in an outgoing link queue.
+What is a queueing delay?;;Most packet switches use store-and-forward transmission at their inbound links, necessitating temporary storage of packets. Queueing delay occurs when an outgoing link is already busy transmitting other packets in an outgoing link queue.;
 
-How does a router map destination addresses (or portions thereof) to its outgoing links?;With a forwarding table.
+How does a router map destination addresses (or portions thereof) to its outgoing links?;;With a forwarding table.;
 
-What is ISP peering?;ISPs pay their upstream providers based on traffic. To save costs, they sometimes join their networks together directly. IXPs (Internet Exchange Points) are meeting points where multiple ISPs can peer.
+What is ISP peering?;;ISPs pay their upstream providers based on traffic. To save costs, they sometimes join their networks together directly. IXPs (Internet Exchange Points) are meeting points where multiple ISPs can peer.;
 
-At each node along a path, a packet suffers delays. What are the 4 most important kind of delays?;Nodal processing - examine headers, decide where to send it<br/>Queueing - before transmitting on to a link<br/>Transmission - link transmission rate / packet size<br/>Propagation - propagation speed of the link
+At each node along a path, a packet suffers delays. What are the 4 most important kind of delays?;;Nodal processing - examine headers, decide where to send it<br/>Queueing - before transmitting on to a link<br/>Transmission - link transmission rate / packet size<br/>Propagation - propagation speed of the link;
 
-When might transmission delay be a factor?;When broadcasting a large packet over a low transmission rate link it could be in the 100s of milliseconds. Typically negligible for transmission rates of 10+ Mbps.
+When might transmission delay be a factor?;;When broadcasting a large packet over a low transmission rate link it could be in the 100s of milliseconds. Typically negligible for transmission rates of 10+ Mbps.;
 
-When can propagation delay be a factor?;It can be 100s of milliseconds for two routers connected by geostationary satellite link. For routers in the same access network it'll be negligible - a couple microseconds.
+When can propagation delay be a factor?;;It can be 100s of milliseconds for two routers connected by geostationary satellite link. For routers in the same access network it'll be negligible - a couple microseconds.;
 
-Why is processing delay important?;It's negligible for an individual packet, but strongly influences a routers max throughput.
+Why is processing delay important?;;It's negligible for an individual packet, but strongly influences a routers max throughput.;
 
-Virus vs worm?;Virus requires user interaction to infect the device, worms don't. (user might be running vulnerable application in which attacker can just send malware)
+Virus vs worm?;;Virus requires user interaction to infect the device, worms don't. (user might be running vulnerable application in which attacker can just send malware);
 
-Three types of DoS attacks?;Vulnerability attack - send the right messages to a vulnerable app, make the app or the host crash<br/>Bandwidth flooding - send tons of packets, legit packets are dropped<br/>Connection flooding - bog them down with bogus TCP connections, host stops accepting legit connections.
+Three types of DoS attacks?;;Vulnerability attack - send the right messages to a vulnerable app, make the app or the host crash<br/>Bandwidth flooding - send tons of packets, legit packets are dropped<br/>Connection flooding - bog them down with bogus TCP connections, host stops accepting legit connections.;
 
-Best defense against packet sniffing?;Cryptography
+Best defense against packet sniffing?;;Cryptography;
 
-Best defense against attackers masquerading as someone a host trusts?;End-point authentication, which allows us to say with certainty who is sending us packets.
+Best defense against attackers masquerading as someone a host trusts?;;End-point authentication, which allows us to say with certainty who is sending us packets.;
 
-What are some features that TCP implements that UDP does not?;Congestion control, flow control, reliable data transfer
+What are some features that TCP implements that UDP does not?;;Congestion control, flow control, reliable data transfer;
 
-The simplest tool to perform a load testing;ab (Apache Benchmarking tool)<br/>Execute 100 HTTP GET requests to given URL.<br/>ab -n 100 {url}<br/>Execute 100 HTTP GET requests, processing up to 10 requests concurrently, to given URL.<br/>ab -n 100 -c 10 {url}
+The simplest tool to perform a load testing;;ab (Apache Benchmarking tool)<br/>Execute 100 HTTP GET requests to given URL.<br/>ab -n 100 {url}<br/>Execute 100 HTTP GET requests, processing up to 10 requests concurrently, to given URL.<br/>ab -n 100 -c 10 {url};
 
-DNS lookup utility;dig<br/>Lookup the IP(s) associated with a hostname (A records)<br/>dig +short {hostname.com}<br/>Specify an alternate DNS server to query (8.8.8.8 is google's public DNS)<br/>dig @8.8.8.8 {hostname.com}
+DNS lookup utility;;dig<br/>Lookup the IP(s) associated with a hostname (A records)<br/>dig +short {hostname.com}<br/>Specify an alternate DNS server to query (8.8.8.8 is google's public DNS)<br/>dig @8.8.8.8 {hostname.com};
 
-Reads and writes TCP or UDP data;nc<br/>listen on a specified port<code>nc -l {port}</code><br/>connect to a certain port (you can then write to this port)<code>nc {ip_address} {port}</code><br/>serve a file<code>cat somefile.txt | nc -l {port}</code><br/>receive a file<code>nc {ip_address} {port} > somefile.txt</code>
+Reads and writes TCP or UDP data;;nc<br/>listen on a specified port<code>nc -l {port}</code><br/>connect to a certain port (you can then write to this port)<code>nc {ip_address} {port}</code><br/>serve a file<code>cat somefile.txt | nc -l {port}</code><br/>receive a file<code>nc {ip_address} {port} > somefile.txt</code>;
 
-send ICMP ECHO_REQUEST packets to network hosts;ping<br/>Ping host limiting the number of packages to be send to four<br/>ping -c 4 {host}<br/>Ping host, waiting for 0.5 s between each request (default is 1 s)<br/>ping -i 0.5 {host}<br/>Ping host without trying to lookup symbolic names for addresses<br/>ping -n {host}
+send ICMP ECHO_REQUEST packets to network hosts;;ping<br/>Ping host limiting the number of packages to be send to four<br/>ping -c 4 {host}<br/>Ping host, waiting for 0.5 s between each request (default is 1 s)<br/>ping -i 0.5 {host}<br/>Ping host without trying to lookup symbolic names for addresses<br/>ping -n {host};
 
-Dump traffic on a network;tcpdump<br/>capture the traffic from a specific interface, source, destination and port<br/>tcpdump -i {eth0} src {192.168.1.1} dest {192.168.1.2} and port 80<br/>capture the traffic from or to a host<br/>tcpdump host {www.example.com}
+Dump traffic on a network;;tcpdump<br/>capture the traffic from a specific interface, source, destination and port<br/>tcpdump -i {eth0} src {192.168.1.1} dest {192.168.1.2} and port 80<br/>capture the traffic from or to a host<br/>tcpdump host {www.example.com};
 
-Print the route packets trace to network host;traceroute {host}
+Print the route packets trace to network host;;traceroute {host};
 
-Look at open network connections;all listening ports: <code>netstat -l</code><br/>listening TCP ports: <code>netstat -p tcp</code>
+Look at open network connections;;all listening ports: <code>netstat -l</code><br/>listening TCP ports: <code>netstat -p tcp</code>;
 
-Find all files open by a process?;<code>lsof -c mysq</code><br/>list open files by procs starting w characters<br/>^__ negates, /__/ for regex
+Inspect connections?;;sudo netstat -pant;
 
-What protocol layer is SSL?;"Trick question, it's not a protocol, it's just two application-level decorator functions for the TCP socket API.<br/>(Sending host pushes data into SSL's socket-like API. SSL encrypts and pushes into TCP socket API. Receiving host receives data from TCP socket, passes to SSL socket-like API, decrypts, passes to application.)
+Find all files open by a process?;;<code>lsof -c mysq</code><br/>list open files by procs starting w characters<br/>^__ negates, /__/ for regex;
+
+Names for units of transfer for ethernet, IP, UDP, TCP?;;Frame, packet, datagram, segment;
+
+What protocol layer is SSL?;;Trick question, it's not a protocol, it's just two application-level decorator functions for the TCP socket API.<br/>(Sending host pushes data into SSL's socket-like API. SSL encrypts and pushes into TCP socket API. Receiving host receives data from TCP socket, passes to SSL socket-like API, decrypts, passes to application.);

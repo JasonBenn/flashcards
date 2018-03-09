@@ -1,1 +1,35 @@
 "Why use 2-part commit over Raft?<br>Raft requires less nodes to confirm!";;2 part commit requires everyone agree<br>Raft only requires majority agree<br>As a result, in Raft only leader can do reads or writes<br>2PC/3PC = anyone can read or write.;
+
+Why are writes so much more expensive than reads?;;Don't need to be transactional, just consistent. They come from memory after the first read.;
+
+How much to read 1MB sequentially from memory?;;250,000 ns (4GB/sec);
+
+Execute typical instruction?;;1 ns (1B/sec);
+
+Fetch from L1 cache memory?;;0.5 ns (2B/sec);
+
+Branch misprediction?;;5 ns;
+
+Fetch from L2 cache memory?;;7 ns;
+
+Fetch from main memory?;; 100 ns (.0001 ms) (100,000,000/sec);
+
+Send 2K bytes over 1Gbps network;; 20,000 ns (.02 ms) (50k/sec);
+
+Fetch from new disk location (seek);; 8,000,000 ns (8 ms) (~100/sec);
+
+Read 1MB sequentially from disk?;;20,000,000 ns (20 ms);
+
+Size of average packet?;;1500 bytes, max size: 65k;
+
+Subdivisions of second?;;milli (-3), micro (-6), nano (-9), pico (-12), femto (-15) (time for light to travel across a virus);
+
+Packet round trip from US to Europe?;;150,000,000 ns (150 ms) (6/sec);
+
+Mutex lock/unlock;;25 ns;
+
+Write vs read speed?;;Reads are ~40x faster;
+
+How to optimize a distributed system that's bottlenecked by heavily written objects?;;Optimize for low write contention, and spread writes out wide.;
+
+What should you be thinking about when architecting a system?;;Scaling writes.;
