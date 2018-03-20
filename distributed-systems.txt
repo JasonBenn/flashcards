@@ -18,7 +18,7 @@ Send 2K bytes over 1Gbps network;; 20,000 ns (.02 ms) (50k/sec);
 
 Fetch from new disk location (seek);; 8,000,000 ns (8 ms) (~100/sec);
 
-Read 1MB sequentially from disk?;;20,000,000 ns (20 ms);
+Read 1MB sequentially from disk?;;20,000,000 ns (20 ms) (50MB/sec);
 
 Size of average packet?;;1500 bytes, max size: 65k;
 
