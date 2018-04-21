@@ -1,20 +1,26 @@
-How do you decide which way control should flow between two services?;;Consider which way control flows and which way data flows. Ideally, one won't have to know anything about the other. If one service's only responsibility is to define and enforce a contract, then it can have any number of different types of clients. And all of the calling/receiving logic can live at the other side, where it can change together.;
-
-How do big companies like Amazon and Uber deploy services in coordination?;;They avoid it. Versioned APIs, multiple versions of services deployed simultaneously, gradual shifts from one version to the other tolerated. Unlocks A/B testing, gradual rolling deploys, easier rollbacks.;
-Squash a few commits from the last 10 commits;;;git rebase -i HEAD~10
 Discard local changes in a specific file;;;git checkout HEAD file.txt
-You're reading commits. You notice you have duplicated someone else's work. Solution?;;reset --soft, on top of their remote branch.;
-Git is meant to track ____, not ____.;;changes, history;
-Show remotes (am I connected to Heroku?);;;git remote show
-To re-add a deleted commit?;;;git reflog
-Remove untracked files from working tree?;;;git clean --dry-run<br>git clean -fd # (force, directories)
 Get list of files change by commit? Aggregated together?;;;git lg --stat HEAD~2..HEAD<br>git diff --stat HEAD~2
-List recent commits to a file?;;;git log --follow file.txt
-reset vs checkout?;;reset: move branch pointer to commit, change working tree + index.<br>checkout: move HEAD pointer to commit (unless filename passed), change working tree only.;
-Working tree, index, "staged", repository?;;Working tree: files.<br>index: changes ready to be committed.<br>staged: changes in the index.<br>repository: history of commits.;
-reset --soft;;Move branch pointer, but leave working tree/index unchanged. Changes preserved, allows you to rewrite commits on top of another branch.;
-reset --hard;;Move branch pointer, reset index and working tree. Changes discarded.;
+Git is meant to track ____, not ____.;;changes, history;
+How do big companies like Amazon and Uber deploy services in coordination?;;They avoid it. Versioned APIs, multiple versions of services deployed simultaneously, gradual shifts from one version to the other tolerated. Unlocks A/B testing, gradual rolling deploys, easier rollbacks.;
 How do you "keep generating hashes" until you get one that starts with X zeroes?;;The hash includes all of the data in the block including a nonce - just update the nonce.;
-Why does including the previous block's hash help a blockchain resist tampering?;;Because now none of the subsequent blocks have IDs that start with zeroes. Even if you re-mined them all, they'd all have different hashes from other blockchain copies, you'd be able to tell.;
-What prevents anyone from adding txn that adds "you transferred all your balance to me" to a block?;;Each txn is cryptographically signed by initiator.;
+How do you decide which way control should flow between two services?;;Consider which way control flows and which way data flows. Ideally, one won't have to know anything about the other. If one service's only responsibility is to define and enforce a contract, then it can have any number of different types of clients. And all of the calling/receiving logic can live at the other side, where it can change together.;
+List recent commits to a file?;;;git log --follow file.txt
 Merkle tree?;;Each node is hash of children.;
+Remove untracked files from working tree?;;;git clean --dry-run<br>git clean -fd # (force, directories)
+reset --hard;;Move branch pointer, reset index and working tree. Changes discarded.;
+reset --soft;;Move branch pointer, but leave working tree/index unchanged. Changes preserved, allows you to rewrite commits on top of another branch.;
+reset vs checkout?;;reset: move branch pointer to commit, change working tree + index.<br>checkout: move HEAD pointer to commit (unless filename passed), change working tree only.;
+Show remotes (am I connected to Heroku?);;;git remote show
+Squash a few commits from the last 10 commits;;;git rebase -i HEAD~10
+To re-add a deleted commit?;;;git reflog
+What prevents anyone from adding txn that adds "you transferred all your balance to me" to a block?;;Each txn is cryptographically signed by initiator.;
+Why does including the previous block's hash help a blockchain resist tampering?;;Because now none of the subsequent blocks have IDs that start with zeroes. Even if you re-mined them all, they'd all have different hashes from other blockchain copies, you'd be able to tell.;
+Working tree, index, "staged", repository?;;Working tree: files.<br>index: changes ready to be committed.<br>staged: changes in the index.<br>repository: history of commits.;
+You're reading commits. You notice you have duplicated someone else's work. Solution?;;reset --soft, on top of their remote branch.;
+🐛 A task processor was running out of memory (5GB+) while scoring, but the aggregate size of _all_ models on disk was 3GB?;;📈 joblib compresses them - some are 150MB on disk and 800MB in memory. Solution: don't cache the models.;
+🐛 Cached by the id() (a pointer);;📈 this value might be strange if that object falls out of scope and python garbage collects it and reallocates a list there. Freshly unoccupied space that's list-sized? More likely to happen than you might think!;
+🐛 I made a change to a caching behavior and it caused a bug on deploy.;;📈 The old cache was stale, and I tried to clear them in a post signal (it should have been a pre signal), but even then, it would have only cleared out the cache for the web server master process, and none of the child procs.<br>I didn't even anticipate it would be a problem!;
+🐛 Pytest is broken, with inscrutable errors.;;📈 Python was being executed while loading modules, and it was broken.;
+🐛 RateProfile is failing because no candidates were loading, so the actions can't happen.;;📈 The Cerebro query wasn't returning anyone with scores not because it was empty but because it was over-filtered. Discovered by applying filters one at a time.;
+🐛 Tasks are timing out, and when I profile, lots of time is being spent in regex compile();;📈 Actually, it was hitting the database! Many times over many loops.;
+🐛 What's the problem with correlating predictions with ratings?;;📈 Well, these predictions are generated by models that have seen the ratings! So they're liable to have memorized the answer. Solution is to use cross-validation, up to leave-one-out cross-validation.;
