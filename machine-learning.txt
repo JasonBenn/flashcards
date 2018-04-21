@@ -120,3 +120,20 @@ Why do word embeddings work by counting context words?;;Because the meaning of "
 Why is it convenient and fast to use the square L2 norm?;;Squared L2 can be computed with X.T @ X<br>Derivatives with respect to each x only require x, whereas L2 norm derivs require whole vector.;
 Why is it cool to generate synthetic segmentation masks and then convert them to images?;;In healthcare settings, training on this synthetic data can sidestep privacy concerns. Performance is on par: 1% difference in F1 score. Dual Generative Adversarial Networks.;
 Why is it cool to know the "rank" of a matrix?;;Because that's how many dimensions the matrix's column vectors span - AKA, the # of linearly independent vectors of the matrix.;
+GANs, one of the more exciting developments, has yet to have its "batch norm" moment, where everything wants to train. You have to fight them one hyperparam at a time.;;;
+
+Deep RL models also haven't had their batchnorm moment - they don't yet "want" to train. You have to fight them one hyperparam at a time.;;;
+
+Making deep networks amenable to (stable) online updates from weakly supervised data is huge. Solving it enables true lifelong learning and opens many applications.;;;
+
+Nonstandard approach: feedback! "It’s insane to me that we’ve gotten this far with pure feedforward approaches. Dynamical systems are very efficient, adaptive learning machines." RNNs, for example, aren't "loopy" and they propagate information only in one direction: if there is any feedback, it comes from outside the learner. Contrast, e.g. with Markov nets, where information is propagated in both directions within the model.;;;
+
+Shoehorning an unsupervised problem into a large supervised one is half the magic. Then it's data science, model architecture, and good luck.  Some problems can't ever really be captured as supervised, tho - in those cases, DL probably isn't the answer.;;;
+
+Data helps, but subject to diminishing returns: e.g., diabetic retinopathy prediction accuracy maxed out around 50k - not intractable for a startup.;;;
+
+The difference between unsupervised learning that works (e.g. language models) and unsupervised learning that doesn’t is generally about predicting the causal future (next word, next frame) instead of the present (autoencoding).;;;
+
+I don’t think we’ve really broken through on unsupervised learning. There’s a huge amount of information and structure in the unconditioned data distribution, and it seems like there should be some way for a learning algorithm to benefit from that.;;;
+
+There are three problems with the real world: (1) you can't run it faster than real time; (2) you can't back-propagate gradients through it, (3) any action you take can hurt or kill you. -Yann LeCun;;;
