@@ -1,4 +1,0 @@
-How do you "keep generating hashes" until you get one that starts with X zeroes?;;The hash includes all of the data in the block including a nonce - just update the nonce.;
-Why does including the previous block's hash help a blockchain resist tampering?;;Because now none of the subsequent blocks have IDs that start with zeroes. Even if you re-mined them all, they'd all have different hashes from other blockchain copies, you'd be able to tell.;
-What prevents anyone from adding txn that adds "you transferred all your balance to me" to a block?;;Each txn is cryptographically signed by initiator.;
-Merkle tree?;;Each node is hash of children.;
