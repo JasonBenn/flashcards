@@ -133,3 +133,5 @@ Physical location of postgres record?;;;ctid
 psql pretty print;;;\x auto
 
 Postgres activity table?;;;pg_stat_activity
+
+What are common reasons for a segfaults in Python?;;Binary module & library version mismatch<br>C extension (or Cython) is broke;

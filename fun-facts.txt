@@ -1,17 +1,12 @@
-Why does putting your palms over your ears, snapping your fingers on the back of your skull 40-50 times (making a loud, drumming noise), sometimes relieve tinnitus?;;Overworked muscles at the base of skull are common source of tinnitus & headaches. Suboccipital muscles are always on fighting gravity and looking at computers. Too much contraction makes them short and painful. Tapping muscles makes them contract (try your belly). Continual tapping causes the muscle to burn up its resources (electrolytes, ATP). When cells are depleted, they turn off. When enough turn off, muscle relaxes = pain relief. This is how trigger point therapy/myofascial release work.;
-
-Why are cruciferous vegetables good for you?;;They're rich in an enzyme that stimualtes sulforophane, which is an indirect antioxidant, which kills the precursors to cancer cells. Make sure to chew or crush them - don't heat them.;
-
-Subdivisions of second?;;milli (-3), micro (-6), nano (-9), pico (-12), femto (-15) (time for light to travel across a virus), atto (-18), zepto (-21), yocto (-24) (half-life for decay of Higgs Boson);
-
-What's an RSU?;;Like an option with no strike price, so they can't go underwater, so they're always worth at least something.<br>Tax implications: they're taxed as income when they vest, and you pay cap gains on appreciation when you sell.;
-
-When are options taxed?;;When you exercise and when you sell.<br>Exercise: the difference between exercise price and market price is income.<br>Sell: you pay capital gains on appreciation.;
-
-Long-term vs short-term capital gains?;;When you sell equity, you pay capital gains on the increase of that equity's value. Short-term is income tax (35-50%). You qualify for long-term after holding the equity for a year and it's 15-20%.;
-
-Incentive stock options vs non-qualified stock options?;;ISOs are for employees, NSOs for contractors and advisors, and ISOs have slightly favorable tax treatment: tax burden at exercise can qualify for capital gains instead of income.;
-
 How does the wash sale rule help you avoid capital gains taxes?;;Because your capital gains tax basis is net (your gains - your losses), you can sell a stock that's losing to reduce your tax burden (because it will be counted as a loss and offset your income from gains). The wash sale rule allows you to buy it back 30 days later. (This is tax loss harvesting.);
-
+Incentive stock options vs non-qualified stock options?;;ISOs are for employees, NSOs for contractors and advisors, and ISOs have slightly favorable tax treatment: tax burden at exercise can qualify for capital gains instead of income.;
+Long-term vs short-term capital gains?;;When you sell equity, you pay capital gains on the increase of that equity's value. Short-term is income tax (35-50%). You qualify for long-term after holding the equity for a year and it's 15-20%.;
+Radiologist process?;;Identify spatial features & signal pattern compared to normal organ, differential diagnosis (radiographic score), then read EHR, revise (clinical score), write report.;
+Radiology tooling?;;PowerScribe data input tool, images, EHR.;
+Reminder: problem in healthcare data is not privacy. HIPAA allows for it. Problem is TRUTH.;;;
+Subdivisions of second?;;milli (-3), micro (-6), nano (-9), pico (-12), femto (-15) (time for light to travel across a virus), atto (-18), zepto (-21), yocto (-24) (half-life for decay of Higgs Boson);
 What is early exercising and an 83b election?;;Early exercising allows you to exercise options and pay taxes on them before they vest (you elect to do this with the 83b).<br>Normally you have to wait until they vest for you to exercise, and that's when taxes are assessed.<br>This way you can pay taxes up-front so that you avoid paying higher income tax from exercising later.<br>This just minimizes one of the two ways options are taxed. You still have to pay capital gains when you sell.;
+What's an RSU?;;Like an option with no strike price, so they can't go underwater, so they're always worth at least something.<br>Tax implications: they're taxed as income when they vest, and you pay cap gains on appreciation when you sell.;
+When are options taxed?;;When you exercise and when you sell.<br>Exercise: the difference between exercise price and market price is income.<br>Sell: you pay capital gains on appreciation.;
+Why are cruciferous vegetables good for you?;;They're rich in an enzyme that stimualtes sulforophane, which is an indirect antioxidant, which kills the precursors to cancer cells. Make sure to chew or crush them - don't heat them.;
+Why does putting your palms over your ears, snapping your fingers on the back of your skull 40-50 times (making a loud, drumming noise), sometimes relieve tinnitus?;;Overworked muscles at the base of skull are common source of tinnitus & headaches. Suboccipital muscles are always on fighting gravity and looking at computers. Too much contraction makes them short and painful. Tapping muscles makes them contract (try your belly). Continual tapping causes the muscle to burn up its resources (electrolytes, ATP). When cells are depleted, they turn off. When enough turn off, muscle relaxes = pain relief. This is how trigger point therapy/myofascial release work.;

@@ -1,0 +1,13 @@
+Aneurysm?;;Blood vessel wall weakens, causes bulge.;
+Arterys?;;First/only(?) FDA-approved radiology tool. Partnered with GE, a major manufacturer. Data stays in hospital. Graphical tool w/ labeling + DL;
+Athena health?;;EHR service "unbreak healthcare";
+Augmedix?;;Physicians wear Google Glass, remote scribe takes notes and updates EHR, dr signs off on notes.;
+Clarifai?;;Image/video recognition API;
+CrowdFlower?;;Training data as a service.;
+Decision support tool for doctors;;Clinical decision support system;
+Enlitic?;;DL for medical diagnoses. Jeremy Howard cofounded.;
+Greg Corrado?;;Cofounder/Principal Scientist @ Google Brain. Interested in force multipliers for doctors (diagnoses, sort/update EHRs, help write doctor's reports).;
+How do we incentivize data hoarders to let us train models on their data?;;;
+Mighty AI?;;Training data as a service for self-driving cars, $30M funding, ~$100M valuation;
+Squadrun?;;India-based, human-powered training data as a service.;
+What do research group directors want?;;Faster and better imaging software, increased size of team.;

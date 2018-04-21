@@ -1,6 +1,7 @@
 Week of Feb 2/9
 
-MATH/STATISTICS TODO:
+
+MACHINE LEARNING TODO:
 
 Matrix similarity?;;Change of basis could result in diagonal matrix;
 Diagonalizable matrix?;;A matrix similar to a diagonal matrix (so... it's vectors are orthogonal?);
@@ -17,6 +18,7 @@ Numerical gradient vs analytical gradient?
 SGD vs minibatch gradient descent?
 How do you figure out if your hyperparameter choice is a good one?;;Cross-validation.;
 np: multi_iter?;;Element's index in the iterator; https://docs.scipy.org/doc/numpy-1.12.0/reference/arrays.nditer.html
+
 
 
 DATABASES TODO:
@@ -36,7 +38,9 @@ Latency Numbers Every Programmer Should Know: https://gist.github.com/jboner/284
 Test with: http://computers-are-fast.github.io/
 
 
+
 DIST SYS TODO:
+
 Throughput vs latency as you distribute?
 
 isolation level: Snapshot?;
@@ -45,7 +49,9 @@ isolation level: Read committed?;
 isolation level: Serializable?;
 
 
-OOP-SOA TODO:
+
+PROGRAMMING TODO:
+
 This talk from Jan: https://www.youtube.com/watch?v=2rKEveL55TY
 
 - django.contrib.contenttypes: "allows permissions to be associated to models"

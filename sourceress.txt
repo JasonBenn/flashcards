@@ -1,0 +1,1 @@
+Get first 1000 WorkHistoryProfiles?;;;ids = gandalf_service.get_all_ids()<br>gandalf_service.get_profiles(ids[:10000])
