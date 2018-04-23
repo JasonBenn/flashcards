@@ -143,3 +143,7 @@ Why do word embeddings work by counting context words?;;Because the meaning of "
 Why is it convenient and fast to use the square L2 norm?;;Squared L2 can be computed with X.T @ X<br>Derivatives with respect to each x only require x, whereas L2 norm derivs require whole vector.;
 Why is it cool to generate synthetic segmentation masks and then convert them to images?;;In healthcare settings, training on this synthetic data can sidestep privacy concerns. Performance is on par: 1% difference in F1 score. Dual Generative Adversarial Networks.;
 Why is it cool to know the "rank" of a matrix?;;Because that's how many dimensions the matrix's column vectors span - AKA, the # of linearly independent vectors of the matrix.;
+Ridge vs Lasso vs ElasticNet?;;Lasso has L1 penalty (imposes sparsity), Ridge has L2 penalty (limits size of coefficients), ElasticNet is a mix of the two.;
+Ridge vs Lasso behavior w highly correlated variables?;;Ridge shrinks them towards each other, Lasso is ""indifferent"" and picks one;
+Ridge vs Lasso with one powerful predictor?;;Ridge (L2) will shrink it more than Lasso (L1).;
+PCA vs SVD?;;PCA is eigendecomp, so it has to square matrices first, which means it can't use sparse matrices efficiently.<br>SVD: no need to center matrices first.;
