@@ -147,3 +147,9 @@ Ridge vs Lasso vs ElasticNet?;;Lasso has L1 penalty (imposes sparsity), Ridge ha
 Ridge vs Lasso behavior w highly correlated variables?;;Ridge shrinks them towards each other, Lasso is ""indifferent"" and picks one;
 Ridge vs Lasso with one powerful predictor?;;Ridge (L2) will shrink it more than Lasso (L1).;
 PCA vs SVD?;;PCA is eigendecomp, so it has to square matrices first, which means it can't use sparse matrices efficiently.<br>SVD: no need to center matrices first.;
+How do you concat two DataFrames?;;axis: 0 for rows, 1 for columns.<br>Join: how to join the other axis(es).;pd.concat(dfs, axis, join={'outer','inner'})
+Concat three dataframes into a hierarchical index, where each dataframe has a different outermost key.;;;pd.concat(dfs, keys=['a', 'b', 'c'])
+Why is building or combining DataFrames expensive?;;Because concat (and therefore append, merge, join) make full copies of the data by default.;
+DataFrames: axis 1 vs axis 0?;;0 = index, 1 = columns.;
+Select a row in a DataFrame?;;;df[df['Column Name'] == 0]
+Best way to add a column to a dataframe?;;;df[col] = column
