@@ -153,3 +153,4 @@ Why is building or combining DataFrames expensive?;;Because concat (and therefor
 DataFrames: axis 1 vs axis 0?;;0 = index, 1 = columns.;
 Select a row in a DataFrame?;;;df[df['Column Name'] == 0]
 Best way to add a column to a dataframe?;;;df[col] = column
+What is a p-value?;;It's the chance that the null hypothesis would have produced a better result than this. So a very tiny chance means that you can reject the null hypothesis.;
