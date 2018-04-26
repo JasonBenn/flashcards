@@ -135,3 +135,9 @@ psql pretty print;;;\x auto
 Postgres activity table?;;;pg_stat_activity
 
 What are common reasons for a segfaults in Python?;;Binary module & library version mismatch<br>C extension (or Cython) is broke;
+
+How does IPython's %debug magic work?;;IPython keeps a process hanging around for the last exception, and %debug can connect to it later.;
+
+How are Python debuggers implemented?;;sys.settrace is used to set the system's trace function for the current thread, this function is then invoked with every line and exception. A debugger process runs in the background with breakpoints in mind, when those lines are hit, it opens a REPL.;
+
+What is PyDevd?;;A high-performance debugger that handles settrace calls and decides what to do. Pydev is fast because it disables tracing entirely for contexts with no breakpoints!;

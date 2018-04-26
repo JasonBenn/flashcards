@@ -67,3 +67,33 @@ What is the difference between:<br>drwx------<br>lrwx------<br>-rwx------;;the f
 What is WHOIS?;;A protocol for asking about ICANN registration information for an IP, domain, or autonomous system. Might include contact info, domain names, abuse info.;
 What's the value of $0?;;The script's name. Can be supplied with `exec -a`.;
 Which files are changed?<br>chmod 600 ~/symlink<br>chmod -h 600 ~/symlink<br>chmod -R 600 ~/<br>chmod 600 ~/*;;1. the symlink target<br>2. the symlink itself<br>3. everything in ~/ except the symlink<br>4. the symlink target<br>chmod changes the target file for every symlink listed<br>chmod ignores symlinks during recursive directory travel<br>chmod -h changes the link itself.;
+Kernel vs OS?;;Kernel is a part of the OS. It's the interface between user and hardware. Memory, network, device, file, process management = kernel.<br>Operating system also includes user interfaces, programs, etc.;
+Window manager?;;A graphical interface, separates lots of Linux distros. X server.<br>The login session chooses one when you log in.;
+What are Qt, GTK, KDE, GNOME?;;Qt, GTK, GDI (Windows), GTK+: GUI toolkits, all running on top of X server, each with a "look and feel".<br>KDE (Qt), GNOME (GTK+): desktop environments with apps providing coherent look.;
+What is Xvfb?;;X virtual frame buffer. Implements X11 display server protocol, so it looks like any other display server, but it doesn't display anything - however, you can ask it for screenshots, test various client conditions, etc.;
+DTrace?;;Badass tracing program that can instrument from userland all the way down to the kernel. Developed for Solaris, which was bought and shut down by Oracle. Too pure for this world;
+User mode vs kernel mode?;;Kernel/supervisor mode has unlimited access to hardware (controls MMU, handles hardware interrupts). ;
+
+Why interrupt-driven OS?;;They were introduced as a performance optimization over polling loops.;
+
+What is an interrupt?;;Signal to the processor from hardware or software indicating that something needs immediate attention. User input from keyboard, network event, software exception. Every interrupt has its own interrupt handler kernel function.;
+
+What is a context switch, and how expensive is it?;;Switching between procs by saving off all state of one running proc so it can be resume later. Also useful for switching between user/kernel space.;
+
+What is the MMU?;;Memory mgmt unit - all memory references pass through here, responsible for maintaining relationship between virtual memory addresses and real memory addresses. Divide memory into pages, usually 4KB.;
+
+Why is a shell called a shell?;;Because it's the outermost layer around a system's kernel.;
+
+Benefits of partitions?;;You can manage files separately, have separate section for OS files or for virtual memory swap, or for limiting damage from out-of-control cache/log files (better on SSDs, otherwise you have lots of head movements);
+
+What is an inode?;;Unix data structure that describe file or dir: attributes, location, metadata (mtime, owner, permissions).<br>"index node" because file system structure is flat array, and "node" is reference to file tree structure.;
+
+What is the superblock?;;Filesystem traits (size, block size) and empty & filled blocks.;
+
+How does a loadable kernel model/kernel extension work?;;They're object files that get to run in kernel mode. Load them in Linux with `modprobe`.;
+
+What are system calls?;;API between userspace programs and kernel functionality: reading files, creating/killing processes, etc. Can be traced/monitored with strace.;
+
+Monolithic kernels vs microkernels?;;Monolithic kernels are big and extensible to avoid extra context switching but are more at risk of kernel bugs, which you can't recover from.<br>Microkernels trade speed for safety and maintain as small of a kernel as possible.;
+
+What is a hypervisor?;;Virtualized hardware for operating systems. Play on "supervisor" AKA the kernel - this is like the supervisor of the supervisor. Can either be bare metal (under the OS) or on top of an OS (which itself hosts more OSs);
