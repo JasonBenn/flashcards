@@ -33,3 +33,9 @@ Write vs read speed?;;Reads are ~40x faster;
 How to optimize a distributed system that's bottlenecked by heavily written objects?;;Optimize for low write contention, and spread writes out wide.;
 
 What should you be thinking about when architecting a system?;;Scaling writes.;
+
+What are desirable properties of the cluster that might manage some critical state, like distributed locks or cluster configuration?;;High throughput/low latency, strong consistency, fault tolerance.;
+
+When people distribute state, what systems do they typically use to ensure consistency?;;ZooKeeper, etcd. Algos: raft, Paxos.;
+
+How does NetChain (Q2 2018) make consensus incredibly low latency?;;Using chain replication on programmable network switches. 1µsec instead of 10-100µsec for ZooKeeper in a datacenter.;

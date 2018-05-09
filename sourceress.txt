@@ -1,3 +1,7 @@
 Get first 1000 WorkHistoryProfiles?;;;ids = gandalf_service.get_all_ids()<br>gandalf_service.get_profiles(ids[:10000])
 
 What does set_breakpoint do?;;Spawns a debugger thread under the current Python process, connects to a remote debugger process, and maintains a list of breakpoint to stop at.;
+
+When using shell_plus, what should you remember?;;transaction.commit() (or transaction.rollback());
+
+What might be happening if there are no error logs after seeing an error?;;Process could be OOM<br>There might not be an error - verify in DevTools/profiler;

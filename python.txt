@@ -141,3 +141,9 @@ How does IPython's %debug magic work?;;IPython keeps a process hanging around fo
 How are Python debuggers implemented?;;sys.settrace is used to set the system's trace function for the current thread, this function is then invoked with every line and exception. A debugger process runs in the background with breakpoints in mind, when those lines are hit, it opens a REPL.;
 
 What is PyDevd?;;A high-performance debugger that handles settrace calls and decides what to do. Pydev is fast because it disables tracing entirely for contexts with no breakpoints!;
+
+Why is Pandas chained indexing bad?;df[df.C <= 0].ix[:,'B':'E'] = 2;Because the get indexer will often (but not always!) return a view, and the set indexer will operate in place.;df[df.C <= 0, 'B':'E'] = 2
+
+When does Pandas copy?;;(subsequent rules override).<br>1. Always.<br>2. Except if inplace=True.<br>3. Get/set indexers have their own rules;
+
+When do Pandas indexers return copies, and when do they return views?;;Set indexers (.loc[], .iloc[], .at[]): views (in-place).<br>Get indexers on single-dtyped frames: views (mostly).<br>Get indexers on multi-dtyped frames: copies.;
