@@ -10,3 +10,13 @@ What's an RSU?;;Like an option with no strike price, so they can't go underwater
 When are options taxed?;;When you exercise and when you sell.<br>Exercise: the difference between exercise price and market price is income.<br>Sell: you pay capital gains on appreciation.;
 Why are cruciferous vegetables good for you?;;They're rich in an enzyme that stimualtes sulforophane, which is an indirect antioxidant, which kills the precursors to cancer cells. Make sure to chew or crush them - don't heat them.;
 Why does putting your palms over your ears, snapping your fingers on the back of your skull 40-50 times (making a loud, drumming noise), sometimes relieve tinnitus?;;Overworked muscles at the base of skull are common source of tinnitus & headaches. Suboccipital muscles are always on fighting gravity and looking at computers. Too much contraction makes them short and painful. Tapping muscles makes them contract (try your belly). Continual tapping causes the muscle to burn up its resources (electrolytes, ATP). When cells are depleted, they turn off. When enough turn off, muscle relaxes = pain relief. This is how trigger point therapy/myofascial release work.;
+
+Conversation: how to say goodbye: what are examples:<br>arrangements<br>"finally"<br>"satisfied"<br>"implied farewell"<br>past tense<br>in a hurry<br>mustn't keep you;;<br>talk about the next thing<br>suggests agenda is complete<br>"well, just wanted to say hi..."<br>"well say hi to the gf"<br>"great to see you again"<br>"i told Arram I'd be with him 5 minutes ago..."<br>"mustn't keep you";
+
+How do we judge a successful conversation?;;For people we know: how enthralled we were by the content<br>With people we're less familiar with, or on a trivial topic: our own performance.;
+
+What's the formula for a solid introduction?;;Who is A + why is B relevant;
+
+How do you make a conversation progress?;;Courtesies (how are you)<br>Trade info (what brought you here)<br>Trade opinion (nice house)<br>Trade feeling (i hate it too);
+
+How do KJ and Devon ask good questions?;;Find the hole in their mental model, ask about that.;
