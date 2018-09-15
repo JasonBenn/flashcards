@@ -20,3 +20,5 @@ What's the formula for a solid introduction?;;Who is A + why is B relevant;
 How do you make a conversation progress?;;Courtesies (how are you)<br>Trade info (what brought you here)<br>Trade opinion (nice house)<br>Trade feeling (i hate it too);
 
 How do KJ and Devon ask good questions?;;Find the hole in their mental model, ask about that.;
+
+A legal term meaning "the argument has been settled by a competent court and the same two parties can't take the same argument any farther.";;res judicata;

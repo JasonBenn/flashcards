@@ -1,0 +1,15 @@
+<img src="adiantum-caudatum.jpg"/>;;Adiantum caudatum;
+<img src="begonia-illumination.jpg"/>;;Begonia "illumination salmon pink";
+<img src="begonia-foliosa.jpg"/>;;Begonia foliosa;
+<img src="deparia-petersenii.jpg"/>;;Deparia petersenii;
+<img src="echeveria.jpg"/>;;Echeveria sp;
+<img src="metrosideros-excelsa.jpg"/>;;Metrosideros excelsa "aurea";
+<img src="neanthe-bella.jpg"/>;;Neanthe Bella palm;
+<img src="neoregalia.jpg"/>;;Neoregalia sp.;
+<img src="peperomia-ferreyrae.jpg"/>;;Peperomia ferreyrae;
+<img src="peperomia-obtusifolia.jpg"/>;;Peperomia obtusifolia;
+<img src="peperomia-sp.jpg"/>;;Peperomia sp;
+<img src="scleranthus.jpg"/>;;Scleranthus uniflorus;
+<img src="selaginella-kraussianna.jpg"/>;;Selaginella kraussiana;
+<img src="selaginella-maellendorfi.jpg"/>;;Selaginella maellendorfi, pallescens;
+<img src="tillandsi.jpg"/>;;Tillandsi... Sp;

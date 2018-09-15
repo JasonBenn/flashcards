@@ -97,3 +97,7 @@ What are system calls?;;API between userspace programs and kernel functionality:
 Monolithic kernels vs microkernels?;;Monolithic kernels are big and extensible to avoid extra context switching but are more at risk of kernel bugs, which you can't recover from.<br>Microkernels trade speed for safety and maintain as small of a kernel as possible.;
 
 What is a hypervisor?;;Virtualized hardware for operating systems. Play on "supervisor" AKA the kernel - this is like the supervisor of the supervisor. Can either be bare metal (under the OS) or on top of an OS (which itself hosts more OSs);
+
+BSD and Linux?;;Both in the Unix family. BSD started in 70s, Linux in 90s. Solaris (1990) Darwin (2000), are famous BSDs.;
+
+How old are Linux major versions?;;1: 1990, 2: 1995, 3: 2012, 4: 2016;

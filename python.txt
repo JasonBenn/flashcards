@@ -147,3 +147,5 @@ Why is Pandas chained indexing bad?;df[df.C <= 0].ix[:,'B':'E'] = 2;Because the 
 When does Pandas copy?;;(subsequent rules override).<br>1. Always.<br>2. Except if inplace=True.<br>3. Get/set indexers have their own rules;
 
 When do Pandas indexers return copies, and when do they return views?;;Set indexers (.loc[], .iloc[], .at[]): views (in-place).<br>Get indexers on single-dtyped frames: views (mostly).<br>Get indexers on multi-dtyped frames: copies.;
+
+GROUP BY multiple columns in Django?;;House.objects.values('price', 'rooms').annotate(Count('rooms'));
